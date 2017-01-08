@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: 'hcb';
+    src: url('hcb-webfont.eot');
+    src: url('hcb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hcb-webfont.woff2') format('woff2'),
+         url('hcb-webfont.woff') format('woff'),
+         url('hcb-webfont.ttf') format('truetype'),
+         url('hcb-webfont.svg#helvetica_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

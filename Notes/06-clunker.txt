@@ -1,0 +1,24 @@
+You can download the raw data, cleaned data, and add-up-the-distribution script at
+
+    http://worrydream.com/ClimateChange/Notes/06-clunker.zip
+    
+
+MPG data for all cars of a given model year is at 
+    
+    https://www.fueleconomy.gov/feg/download.shtml
+    
+I used the "combined MPG" column, which I believe assumes 55% city-miles and 45% highway-miles, harmonic average.
+
+
+For "MPG distribution for cars currently on the road (in 2008)", I added up the data from the years 1984-2004.  Most cars earlier than 1984 won't be on the road, and cars later than 2004 are unlikely to be sold so soon.  Cars from 2001 and 2002 were excluded because the data was in an old Excel file format which I couldn't open.
+
+The data was sales-weighted by *year*.  Total car sales by year is at 
+
+    http://www.statista.com/statistics/199974/us-car-sales-since-1951/
+
+The data was *not* sales-weighted by *model*, because I couldn't figure out how to find and join that data.  So we're assuming that there are just as many Aston Martins as Honda Civics.  Hopefully it will come out in the wash.
+
+
+For "MPG distribution for new cars on sale (in 2008)", I used the data just from year 2008.  Again, not sales-weighted by model, just one tick per available model.
+
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <base target="_top">
+    <script src="Script/chart-data.js" type="text/javascript"></script>
+</head>
+<body>
+<pre id="result">
+</pre>
+
+<script type="text/javascript">
+    var id = (window.location.search.match(/id=([^\&]+)/) || [])[1];
+    var data = chart_data[id || ""];
+    if (data) {
+        var text = document.createTextNode(JSON.stringify(data, null, 2));
+        document.getElementById("result").appendChild(text);
+    }
+</script>
+
+</body></html>

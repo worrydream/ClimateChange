@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <base target="_top">
+    <title>What can a technologist do about climate change? A personal view.</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script src="Lib/sprintf.js" type="text/javascript"></script>
+    <script src="Lib/Tangle.js" type="text/javascript"></script>
+    <script src="Lib/Touchable.js" type="text/javascript"></script>
+
+    <script src="Script/main.js" type="text/javascript"></script>
+    <script src="Script/clunker.js" type="text/javascript"></script>
+    <script src="Script/carbon-budget.js" type="text/javascript"></script>
+    <script src="Script/previews.js" type="text/javascript"></script>
+    <script src="Script/chart-data.js" type="text/javascript"></script>
+    <script src="Script/charts.js" type="text/javascript"></script>
+    <script src="Script/autocomplete-video.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- header -->
+
+<div class="header no-preview">
+    <div class="header-quote-block">
+        <div class="header-quotes">
+            <div>People say “this is a Manhattan Project, this an Apollo Project”.  Sorry, those are science projects.  Fusion is a Manhattan Project or an Apollo Project... The rest of this is more like <b>retooling for World War II</b>, except with everyone playing on the same team.</div>
+            <div class="who">— Saul Griffith, on converting the world to clean energy</div>
+            <div class="two">This has not been a scientist’s war; it has been a war in which all have had a part.</div>
+            <div class="who2">— Vannevar Bush, on World War II</div>
+        </div>
+    </div>
+
+    <div class="header-plain">
+        <img src="Images/00-page-header.jpg">
+        <h1>What can a technologist do about climate change?</h1>
+        <div class="subtitle">(A personal view)</div>
+        <div class="byline"><a href="http://worrydream.com/">Bret Victor</a> / November 2015</div>
+    </div>
+
+    <div class="header-title-block">
+        <div class="header-titles">
+            <img src="Images/00-titles.png" width="561" height="108">
+            <a href="http://worrydream.com/"><div class="header-title-selflink"></div></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- intro -->
+
+<!-- begin chapter --><div class="chapter">
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>This started with a tweet.  I’m embarrassed how often that happens.</p>
+
+<p>Frustrated by a sense of <a href="http://www.vox.com/2015/8/10/9124145/effective-altruism-global-ai">global mispriorities</a>, I blurted out some snarky and mildly regrettable <a href="https://twitter.com/worrydream/status/631361688931991552">tweets</a> on the lack of attention to climate change in the tech industry (Twitter being a sublime medium for the snarky and regrettable).  Climate change is the problem of our time, it’s everyone’s problem, and most of our problem-solvers are assuming that someone else will solve it.</p>
+
+<p>I’m grateful to one problem-solver, who wrote to ask for specifics —</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<img src="Images/00-tweets.jpg" width="271" height="196">
+
+<div style="display:none;">
+<div>Bret Victor @worrydream - Aug 11<br>Worrying about sentient AI as the ice caps melt is like standing on the tracks as the train rushes in, worrying about being hit by lightning</div>
+<div>Bret Victor @worrydream - Aug 12<br>If any "founders" out there want to "disrupt" our 401 ppm atmospheric CO2, or "moonshot" ocean acidification, that would be cool</div>
+<div>Bret Victor @worrydream - Aug 12<br>"minimum viable planet"</div>
+</div>
+
+<!-- close row --></div></div>
+
+<div class="big-quote">“How do you think the tech community (startup community, or any community) can contribute to tech and/or policy solutions on a global scale?”</div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>The notes below are my attempt to answer that question.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>This is a “personal view”, biased by my experiences and idiosyncrasies.  I’ve followed the climate situation for some time, including working on Al Gore’s book <a href="http://pushpoppress.com/ourchoice/">Our Choice</a>, but I can’t hope to convey the full picture — just a sliver that’s visible from where I’m standing.  I urge you to talk to many scientists and engineers involved in climate analysis and energy, and see for yourself what the needs are and how you can contribute.</p>
+
+<p>This is aimed at people in the tech industry, and is more about what you can do with your career than at a hackathon.  I’m not going to discuss policy and regulation, although they’re no less important than technological innovation.  A good way to think about it, via Saul Griffith, is that <i>it’s the role of technologists to create options for policy-makers.</i></p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:4px;">everything that needs to be done about climate change</div>
+<img src="Images/00-scope-0.png" width="440" height="26">
+</div>
+
+<div class="figure">
+<div class="figure-caption" style="margin-top:16px;margin-bottom:4px;">what you’ll read about here</div>
+<img src="Images/00-scope-1.png" width="440" height="26">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>I’m also only going to directly discuss technology related to the <i>primary cause</i> of climate change (the burning of fossil fuels), although there are technological needs related to other causes (<a href="https://en.wikipedia.org/wiki/Climate_change_and_agriculture#Livestock">livestock</a>, <a href="https://en.wikipedia.org/wiki/Deforestation_and_climate_change">deforestation</a>, <a href="http://www.ted.com/talks/hans_rosling_on_global_population_growth#t-301019">global poverty</a>), as well as mitigating <i>symptoms</i> of climate change (<a href="http://www.theguardian.com/environment/2015/apr/27/extreme-weather-already-on-increase-due-to-climate-change-study-finds">droughts and storms</a>, <a href="https://en.wikipedia.org/wiki/Climate_change_and_ecosystems">ecosystem damage</a>, <a href="http://www.theguardian.com/commentisfree/2015/aug/18/mass-migration-crisis-refugees-climate-change">mass migrations</a>).</p>
+
+<!-- end chapter --></div></div></div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- table of contents template -->
+
+<div id="toc-template" class="toc">
+    <div class="toc-background"></div><div class="top-stripe"></div>
+    <div class="toc-contents">
+        <div class="toc-chapter toc-funding">
+            <a class="toc-chapter-name" href="#funding">Funding</a>
+            <a class="toc-section-name" href="#funding-public">Public investment</a>
+            <a class="toc-section-name" href="#funding-private">Private investment</a>
+        </div><div class="toc-chapter toc-production">
+            <a class="toc-chapter-name" href="#production">Producing Energy</a>
+            <a class="toc-section-name" href="#production-stuff">The stuff around the thing</a>
+            <a class="toc-section-name" href="#production-computation">Computation</a>
+        </div><div class="toc-chapter toc-moving">
+            <a class="toc-chapter-name" href="#moving">Moving Energy</a>
+            <a class="toc-section-name" href="#moving-networking">Networking<br><span>(moving in space)</span></a>
+            <a class="toc-section-name" href="#moving-storage">Storage<br><span>(moving in time)</span></a>
+        </div><div class="toc-chapter toc-consumption">
+            <a class="toc-chapter-name" href="#consumption">Consuming Energy</a>
+            <a class="toc-section-name" href="#consumption-transportation">Transportation<br><span>(consuming what?)</span></a>
+            <a class="toc-section-name" href="#consumption-coordination">Coordination<br><span>(consuming when?)</span></a>
+            <a class="toc-section-name" href="#consumption-efficiency">Efficiency<br><span>(consuming how much?)</span></a>
+        </div><div class="toc-chapter toc-tools">
+            <a class="toc-chapter-name" href="#tools">Tools for Scientists &amp; Engineers</a>
+            <a class="toc-section-name" href="#tools-technical">Technical computing</a>
+            <a class="toc-section-name" href="#tools-modeling">Tools for modeling physical systems</a>
+            <a class="toc-section-name" href="#tools-controlling">Tools for controlling physical systems</a>
+            <a class="toc-section-name" href="#tools-finding">Tools for problem-finding</a>
+        </div><div class="toc-chapter toc-media">
+            <a class="toc-chapter-name" href="#media">Media for Understanding Situations</a>
+            <a class="toc-section-name" href="#media-debate">Model-driven debate</a>
+            <a class="toc-section-name" href="#media-reading">Model-driven reading</a>
+            <a class="toc-section-name" href="#media-writing">Model-driven authoring</a>
+        </div><div class="toc-chapter toc-coda">
+            <a class="toc-chapter-name" href="#coda">Also this</a>
+            <a class="toc-section-name" href="#coda-other">Other technology</a>
+            <a class="toc-section-name" href="#coda-morale">Morale</a>
+            <a class="toc-section-name" href="#coda-see">The world is not what you see</a>
+        </div>
+    </div>
+</div><!-- toc -->
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- funding -->
+
+<div id="funding" class="toc"></div>
+<h2>Funding</h2>
+
+<!-- begin chapter --><div class="chapter">
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>I won’t say much about this, but I can’t leave it out. Available funding sources, and the interests and attitudes of the funders, have always had an enormous effect on what technology comes to exist in the world.  In a time of crisis, it’s the responsibility of those holding the capital to sponsor work on averting the crisis.  That is not happening.</p>
+
+<h3 id="funding-public"><a href="#funding-public">Public investment</a></h3>
+
+<!-- close row --></div></div>
+
+<div class="script" data-script="svg 01-public-structure" style="width:940px;height:302px;"></div>
+
+<div class="public-structure-captions" data-preview-container="public-structure-preview-container">
+
+<div class="public-structure-caption" style="left:0px;width:142px;">The primary source of public funding in the U.S. for “I’ve got a crazy new idea for energy” is <a href="http://arpa-e.energy.gov">ARPA-E</a>.  Last year it granted <a href="http://arpa-e.energy.gov/sites/default/files/ARPA-E%202016%20Budget.pdf">$280 million</a>.</div>
+
+<div class="public-structure-caption" style="left:172px;width:191px;">Incremental innovation is supported by the <a href="http://energy.gov">DOE</a>’s <a href="http://energy.gov/eere/office-energy-efficiency-renewable-energy">Office of Energy Efficiency &amp; Renewable Energy</a>, which has a <a href="http://www5.eere.energy.gov/office_eere/program_budget_formulation.php">$2 billion</a> annual budget for a wide range of initiatives.</div>
+
+<div class="public-structure-caption" style="left:385px;width:126px;">The <a href="http://energy.gov">DOE</a> also funds the <a href="http://energy.gov/national-labs">national labs</a>, which do a lot of energy research.</div>
+
+<div class="public-structure-caption" style="left:596px;width:161px;">The <a href="http://www.nsf.gov">NSF</a>’s <a href="http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=501026">Energy for Sustainability</a> program gives out <a href="http://www.nsf.gov/awardsearch/advancedSearchResult?WT.si_n=ClickedAbstractsRecentAwards&WT.si_x=1&WT.si_cs=1&WT.z_pims_id=501026&ProgEleCode=7644&BooleanElement=Any&BooleanRef=Any&ActiveAwards=true">$18 million</a> annually for academic research.</div>
+
+<div class="public-structure-caption" style="left:772px;width:173px;">Public funding can also be found at the state level, such as the <a href="http://www.energy.ca.gov">California Energy Commission</a>’s <a href="http://www.energy.ca.gov/contracts/epic.html">EPIC</a> program, which has a <a href="http://www.energy.ca.gov/2014publications/CEC-500-2014-038/CEC-500-2014-038-CMF.pdf">$130 million</a> annual budget.</div>
+
+</div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<div id="public-structure-preview-container"></div>
+
+<p>Possibly the largest source of public funding is in the form of <a href="http://energy.gov/eere/slsc/downloads/guide-federal-financing-energy-efficiency-and-clean-energy-deployment">financing programs</a>, such as <a href="http://energy.gov/lpo/about-us-home">loan guarantees</a> and <a href="http://energy.gov/savings/renewable-electricity-production-tax-credit-ptc">tax credits</a>.</p>
+
+<blockquote>
+[The U.S. energy loan program] literally kick-started the whole utility-scale photovoltaic industry... The program funded the first of five huge solar projects in the West... Before that, developers couldn’t get money from private lenders. But now, with proven business models, they can. <span class="cite"><a href="http://www.npr.org/2014/11/13/363572151/after-solyndra-loss-u-s-energy-loan-program-turning-a-profit">(source)</a></span></blockquote>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>It’s great that this funding exists, but let’s be clear — it’s a pittance. If we take Saul Griffith’s quote at face value and accept that addressing climate change will take a concerted global effort comparable to World War II, consider that the U.S. spent about <a href="http://cironline.org/sites/default/files/legacy/files/June2010CRScostofuswars.pdf">$4 trillion</a> in today’s dollars to “fight the enemy” at that time.  Our present enemy is more threatening, and our financial commitment to the fight is several orders of magnitude off.</p>
+
+<blockquote><span class="author">(Naomi Klein)</span> There is... no scenario in which we can avoid wartime levels of spending in the public sector — not if we are serious about preventing catastrophic levels of warming, and minimizing the destructive potential of the coming storms. <span class="cite"><a href="http://bit.ly/1ZJtgdb">(source)</a></span>
+</blockquote>
+
+<p>In the meantime, the fossil fuel industry is being subsidized at about <a href="http://www.worldenergyoutlook.org/resources/energysubsidies/">half a trillion dollars a year</a>.</p>
+
+<p>Public funding for clean energy is a problem to be solved.  It’s not a technology problem.  But it’s a blocker that prevents us from getting to the technology problems.</p>
+
+<h3 id="funding-private"><a href="#funding-private">Private investment</a></h3>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:4px;">U.S. military spending per year <span class="amount">$610 billon</span>
+<span class="cite"><a href="http://www.gpo.gov/fdsys/search/pagedetails.action;jsessionid=sLzjW3BPp1ZBpRCMnN7kfDp2nF3hHqyw6MmvprCLxlf4DyyLdj6X!1929810491!-352118568?granuleId=BUDGET-2015-TAB-5-1&packageId=BUDGET-2015-TAB">(source)</a></span></div>
+<img src="Images/01-publicfunding-0.png" width="438" height="178">
+</div>
+
+<div class="figure">
+<div class="figure-caption" style="margin-top:16px;margin-bottom:4px;">U.S. venture capital investment per year <span class="amount">$48 billon</span>
+<span class="cite"><a href="http://nvca.org/pressreleases/annual-venture-capital-investment-tops-48-billion-2014-reaching-highest-level-decade-according-moneytree-report/">(source)</a></span></div>
+<img src="Images/01-publicfunding-1.png" width="438" height="16">
+</div>
+
+<div class="figure">
+<div class="figure-caption" style="margin-top:16px;margin-bottom:4px;">Office of Energy Efficiency &amp; Renewable Energy budget  <span class="amount">$2 billon</span>
+<span class="cite"><a href="http://www5.eere.energy.gov/office_eere/program_budget_formulation.php">(source)</a></span></div>
+<img src="Images/01-publicfunding-2.png" width="438" height="4">
+</div>
+
+<div class="figure">
+<div class="figure-caption" style="margin-top:16px;margin-bottom:4px;">ARPA-E budget <span class="amount">$0.3 billon</span>
+<span class="cite"><a href="http://arpa-e.energy.gov/sites/default/files/ARPA-E%202016%20Budget.pdf">(source)</a></span></div>
+<img src="Images/01-publicfunding-3.png" width="438" height="4">
+</div>
+
+<div class="figure">
+<div class="figure-caption" style="margin-top:16px;margin-bottom:4px;">NSF Energy for Sustainability budget <span class="amount">$0.02 billon</span>
+<span class="cite"><a href="http://www.nsf.gov/awardsearch/advancedSearchResult?WT.si_n=ClickedAbstractsRecentAwards&WT.si_x=1&WT.si_cs=1&WT.z_pims_id=501026&ProgEleCode=7644&BooleanElement=Any&BooleanRef=Any&ActiveAwards=true">(source)</a></span></div>
+<img src="Images/01-publicfunding-4.png" width="438" height="1">
+</div>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>You can <a href="http://www.wired.com/2012/01/ff_solyndra/">read the story</a> of the so-called “cleantech bubble”.  In brief — between 2008 and 2011, about $15 billion of enthusiastic venture capital went into energy-related startups.  There were a few major failures, investors got spooked, and cleantech became taboo.</p>
+
+<p>Late-stage venture funding has dwindled, and early-stage funding has all but disappeared.  Founders spend their days scrounging instead of building.  Consider the American energy storage company <a href="http://www.primuspower.com/">Primus Power</a>, which had to raise its <a href="http://www.marketwired.com/press-release/primus-power-secures-20-million-in-first-close-of-series-c-funding-1875328.htm">series C from a South African platinum company</a>, and <a href="http://www.greentechmedia.com/articles/read/primus-power-raises-25m-to-bring-flow-batteries-to-kazakhstan">series D from Kazakhstan</a>.</p>
+
+<p>The human race uses <a href="http://www.iea.org/publications/freepublications/publication/KeyWorld2014.pdf">18 terawatts</a>, and will for the foreseeable future.  So there are basically only two scenarios for investors as a collective:</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 01-private-late" style="width:440px;height:97px;"></div>
+<div class="script figure" data-script="chart 01-private-early" style="width:440px;height:97px;margin-top:14px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<div class="indent">
+<p>(a) invest in clean energy immediately; clean energy takes over the <a href="http://selectusa.commerce.gov/industry-snapshots/energy-industry-united-states">$6&nbsp;trillion global energy market</a>; investors get a nice piece of that.</p>
+
+<p>(b) don’t invest in clean energy immediately; fossil fuels <a href="http://www.carbontracker.org/wp-content/uploads/2014/09/Unburnable-Carbon-Full-rev2-1.pdf">burn past our carbon budget</a>; investors inherit a <a href="http://daniellefong.com/2012/08/27/defusing-the-carbon-bomb/">cinder</a>.</p>
+</div>
+
+<p>Scenario (a) seems like the most rational plan for everyone, in the long term.  The fact that most investors’ short-term incentives are structured to prefer scenario (b) is a critical problem to be solved.  Again, it’s not a technology problem, but it’s a blocker that prevents us from getting to the technology problems.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div id="carbon-budget-figure" class="figure" style="padding-bottom:10px;">
+<div class="figure-caption" style="margin-bottom:8px;">world carbon emissions (in GtCO<sub>2</sub>/yr) and carbon budget
+<span class="cite"><a href="Notes/03-carbon-budget.txt">(source)</a></span></div>
+<div style="position:relative;">
+    <div class="script" data-script="svg 01-carbon-budget" style="width:440px;height:192px;"></div>
+    <div class="carbon-budget-knob" data-var="knobPoint"></div>
+    <div class="carbon-budget-knob-help">drag</div>
+</div>
+</div>
+
+
+<!-- end chapter --></div></div></div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- energy production -->
+
+<div id="production" class="toc"></div>
+<h2>Producing Energy</h2>
+
+<!-- begin chapter --><div class="chapter">
+
+<div class="figure" style="margin-top:0;margin-left:105px;margin-bottom:30px;position:relative;">
+    <img src="Images/02-sankey.png" width="730" height="324">
+    <div class="script" data-script="svg 02-sankey" style="position:absolute;left:0;top:0;width:730px;height:324px;"></div>
+    <span class="cite" style="position:absolute;left:131px;top:-5px;"><a href="https://flowcharts.llnl.gov">(source)</a></span>
+</div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>The primary cause of global warming is the dumping of carbon dioxide into the sky.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 02-pollutants" style="width:440px;height:97px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The primary cause of that is the burning of coal, natural gas, and petroleum in order to generate electricity and move vehicles around.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 02-sources" style="width:440px;height:58px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>In order to stop dumping carbon dioxide into the sky, the world will have to generate its energy “cleanly”.  For the purposes of this essay, that will mean mostly via solar and wind, although geothermal, hydroelectric, biomass, and nuclear will all have parts to play.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>This is well-known, but the scale and rate of change required is often unappreciated.  Saul Griffith has a <a href="http://library.fora.tv/2009/01/16/Saul_Griffith_Climate_Change_Recalculated/Griffith_Proposes_Massive_Increase_in_Green_Energy">good bit about this</a>, suggesting that what’s needed is not throwing up a few solar panels, but a major industrial shift comparable to <a href="http://www.ibiblio.org/hyperwar/USA/BigL/BigL-1.html">retooling for World War II</a>.</p>
+
+<p>In 1940 through 1942, U.S. war-related industrial production tripled each year.  That’s over twice as fast as <a href="https://en.wikipedia.org/wiki/Moore%27s_law">Moore’s law</a>.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:-33px;">U.S. gross national product, WWII<br><span class="cite"><a href="http://www.ibiblio.org/hyperwar/USA/BigL/BigL-1.html" style="margin-left:0;">(source)</a></span></div>
+<div class="script" data-script="svg 02-ww2" style="width:440px;height:190px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>In order to avoid the more <a href="http://www.informationisbeautiful.net/visualizations/how-many-gigatons-of-co2">catastrophic climate scenarios</a>, global production and adoption of clean energy technology will have to scale at similar rates — but <a href="refs/DanielleFong-GrowthRateRequiredInEnergyStorage.pdf">continuously for 15 years or more</a>.</p>
+
+<p>The catalyst for such a scale-up will necessarily be political.  But even with political will, it can’t happen without technology that’s <i>capable</i> of scaling, and <i>economically viable</i> at scale.</p>
+
+<p>As technologists, that’s where we come in.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure" style="margin-bottom:-10px;">
+<div class="figure-caption" style="margin-bottom:4px;">optimistic roadmap for 100% clean energy in U.S. by 2050, Mark Jacobson et al
+<span class="cite"><a href="https://web.stanford.edu/group/efmh/jacobson/Articles/I/USStatesWWS.pdf">(source)</a></span></div>
+<div class="script" data-script="svg 02-jacobson" style="width:440px;height:300px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="production-stuff"><a href="#production-stuff">The stuff around the thing</a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Many people seem to assume that breakthoughs in clean energy will come in the form of new generation technology — <a href="http://www.lockheedmartin.com/us/products/compact-fusion.html">fusion</a> <a href="http://news.mit.edu/2015/small-modular-efficient-fusion-plant-0810">reactors</a>, <a href="http://news.mit.edu/2013/thinner-solar-panels-0626">nanoscale solar cells</a>, that sort of thing.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/02-fusion.jpg" width="440" height="100">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Those will be good things to have!  But there’s more than enough power available to today’s solar cells and wind turbines — if only the <i>systems</i> were cheaper, simpler, and scalable. Here are a few examples of the kinds of projects I find interesting:</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 02-solar-land" style="width:440px;height:71px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="http://www.google.com/makani/">Makani</a> hoists its wind turbine to high altitudes with a flying wing instead of a tower.</p>
+
+<blockquote>Makani’s energy kite actually operates on the same aerodynamic principles as a conventional wind turbine, but is able to replace tons of steel with lightweight electronics, advanced materials, and smart software. By using a flexible tether, energy kites eliminate <b>90% of the materials</b> used in conventional wind turbines, resulting in lower costs. <span class="cite"><a href="https://www.google.com/makani/faq/">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/02-makani.jpg" width="440" height="150">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="http://www.altaerosenergies.com/">Altaeros</a> uses a blimp.</p>
+
+<blockquote>The Altaeros Buoyant Airborne Turbine reduces the second largest cost of wind energy – the installation and transport cost – by <b>up to 90 percent</b>, through a containerized deployment that does not require a tower, crane, or cement foundation. <span class="cite"><a href="http://www.altaerosenergies.com/value.html">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/02-altaeros.jpg" width="440" height="105">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="http://www.sunfolding.com/">Sunfolding</a> does solar tracking with pneumatically-actuated plastic soda bottles.</p>
+
+<blockquote>Actuation and control are the highest cost components of today’s tracking systems. Together they account for nearly <b>50% of the tracking system cost</b>.  We replace both with our new approach to tracker design. <span class="cite"><a href="http://www.sunfolding.com/">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/02-sunfolding.jpg" width="440" height="130">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>These projects aren’t about better generators. They are about dramatically reducing the cost of the stuff <i>around</i> the generator.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Some of the best news of the last few years is the plunging cost of solar power.  It’s instructive to look at what exactly is <a href="http://cleantechnica.com/2015/01/29/solar-costs-will-fall-40-next-2-years-heres/">responsible for the drop</a>.  It’s partly cheaper solar panels, due to improved conversion efficiency and falling manufacturing costs.  But panels are now so cheap that they only make up 25% of the <a href="https://en.wikipedia.org/wiki/Balance_of_system">total system cost</a>.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption">levelized cost of solar photovoltaic power ($/MWh)
+<span class="cite"><a href="http://rameznaam.com/2014/10/05/solar-wind-plunging-below-fossil-fuel-prices/">(source)</a></span></div>
+<div class="script" data-script="svg 02-solar-price" style="width:440px;height:108px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The majority of the price drop is now due to better inverters, and better mounting racks, and better installation techniques, and better ways for solar companies to interact with customers.  There’s innovation everywhere, and you don’t need to be on the photovoltaic manufacturing line in order to play.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 02-solarcost" style="width:440px;height:88px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The reason that these reductions in system cost are potentially so significant is the tipping point once solar and wind are consistently cheaper than fossil fuels and can be scaled up to meet demand.</p>
+
+<p>My point here is that there are many ways of contributing toward innovation in the production of clean energy without going off and building a fusion reactor.  Look at the stuff around the things.<p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+
+<h3 id="production-computation"><a href="#production-computation">Computation</a></h3>
+
+<p>Even for something as physical as power generation, the right software can make a signficant contribution.  A few examples that come to mind:</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="http://www.kalyanv.org">Kalyan Veeramachaneni</a> et al at MIT used <a href="http://groups.csail.mit.edu/EVO-DesignOpt/groupWebSite/uploads/Main/IJCAI_sub_KV_AC_UM.pdf">modern probabilistic modeling</a> to <a href="https://news.mit.edu/2015/siting-wind-farms-quickly-cheaply-0717">dramatically improve</a> the process of estimating wind capacity at a location, calculating more accurate predictions in a fraction of the time.</p>
+
+<blockquote>We talked with people in the wind industry, and we found that they were using a very, very simplistic mechanism to estimate the wind resource at a site. <span class="cite"><a href="https://news.mit.edu/2015/siting-wind-farms-quickly-cheaply-0717">(source)</a></span></blockquote>
+
+<p>They didn’t invent a windmill; they invented an algorithm to determine where the windmill should go. It’s now a <a href="http://cardinalwind.com">startup</a>.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:-14px;margin-left:26px;">KL divergence (wrongness) of wind estimates from ground truth
+<span class="cite"><a href="http://groups.csail.mit.edu/EVO-DesignOpt/groupWebSite/uploads/Site/Veeramachaneni_copula.pdf">(source)</a></span></div>
+<img src="Images/02-veeramachaneni.png" width="417" height="210">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="https://en.wikipedia.org/wiki/John_Dabiri">John Dabiri</a>’s team at Caltech used aerodynamic analysis to <a href="http://www.caltech.edu/news/caltechs-unique-wind-projects-move-forward-39703">dramatically improve</a> the energy production and compactness of wind farms.  Their work computes the optimal placement of vertical turbines so they <a href="http://dabirilab.com/fieldlab/">reinforce each other</a> instead of interfering, making possible large arrays of small turbines.</p>
+
+<blockquote>
+This approach dramatically extends the reach of wind energy, as smaller wind turbines can be installed in many places that larger systems cannot, especially in built environments. ...
+Favorable economics stem from an <b>orders-of-magnitude reduction in the number of components</b> in a new generation of simple, mass-manufacturable (even 3D-printable), vertical-axis wind turbines. <span class="cite"><a href="http://static1.squarespace.com/static/55885cf4e4b04e6344662d6a/t/5589cc47e4b09ddbc396cb89/1435094087643/DaGrKoMoPe_AIPCP15.pdf">(source)</a></span></blockquote>
+
+<p>Again, they didn’t invent a new windmill; they used <a href="http://static1.squarespace.com/static/55885cf4e4b04e6344662d6a/t/5589ce85e4b06ad87a6166b3/1435094661559/WhLiDa_BB10.pdf">computational modeling</a> to make viable a much smaller and cheaper existing windmill.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:-14px;margin-left:26px;">footprint power density (watts extracted per square meter of land)
+<span class="cite"><a href="http://static1.squarespace.com/static/55885cf4e4b04e6344662d6a/t/5589cba1e4b0e41fcfcabba7/1435093921809/Da_PT14.pdf">(source)</a></span></div>
+<img src="Images/02-dabiri.png" width="440" height="236">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="http://www.google.com/makani">Makani</a> and <a href="http://www.sunfolding.com">Sunfolding</a> both sprung from Saul Griffith’s <a href="https://otherlab.com">Otherlab</a>, and much of Otherlab’s magic lies in their code.  A common theme is replacing physical material with dynamic control systems:</p>
+
+<blockquote>[Makani’s kite’s] computer system uses GPS and other sensors along with thousands of real-time calculations to guide the kite to the flight path with the strongest and steadiest winds for maximum energy generation. <span class="cite"><a href="https://www.google.com/makani/technology/">(source)</a></span></blockquote>
+
+<blockquote>
+<span class="author">(Saul Griffith)</span> The really big themes I’d like to emphasize, because we need more people to join the club, so to speak, is the importance of being able to substitute a control system — sensors and computers — for actual materials...  We are actually now replacing atoms with bits. <span class="cite"><a href="https://www.youtube.com/watch?v=gyMowPAJwqo&t=12m35s">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/02-control-for-material.jpg" width="440" height="229">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>as well as creating new software tools for design and manufacturing:</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<blockquote><p>Griffith’s team had to write modeling software for the inflatables, because nobody had done anything like it before. But Otherlab creates its own software much of the time anyway. The 123D line of 3D modeling software offered by Autodesk grew out of one of his projects.</p>
+
+<p>“We write all of our own tools, no matter what project we’re building,” Griffith says. “Pretty much anything that we’re doing requires some sort of design tool that didn’t exist before. In fact, the design tools that we write to do the projects that we’re doing are a sort of product in and of themselves.” <span class="cite"><a href="http://www.wired.com/2012/11/saul-griffith/">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption">123D Make</div>
+<a href="http://www.123dapp.com/make"><img src="Images/02-123d-make.jpg" width="440" height="140"></a>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>My point here is that software isn’t just for drawing pixels and manipulating databases — it underlies a lot of the innovation even in physical technology.  More on this below.</p>
+
+
+<!-- end chapter --></div></div></div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- energy moving -->
+
+<div id="moving" class="toc"></div>
+<h2>Moving Energy</h2>
+
+<!-- begin chapter --><div class="chapter">
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>I recently visited the <a href="http://www.caiso.com/">California ISO</a>, which orchestrates the power grid to match energy production with consumption in realtime.  The ISO exists because every megawatt that is generated at a power plant must be immediately consumed somewhere else.  There’s no buffer in the system, aside from a few reservoirs where they can occasionally <a href="https://en.wikipedia.org/wiki/Pumped-storage_hydroelectricity">pump water uphill</a>.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/03-caliso.jpg" width="440" height="197">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>So they’ve evolved a complex apparatus for <a href="http://www.caiso.com/Pages/TodaysOutlook.aspx">forecasting</a> energy demand, and sending realtime <a href="http://www.caiso.com/informed/Pages/EIMOverview/Default.aspx">price signals</a> to producers to make them adjust their output as needed.  This is becoming a <a href="http://cleantechnica.com/2014/07/21/utilities-cry-fowl-over-duck-chart-and-distributed-solar-powercrying-fowl-or-crying-wolf-open-season-on-the-utilitys-solar-duck-chart/">formidable challenge</a> as more and more intermittent (thus, unpredictable) renewables like solar and wind come online, and dirty and expensive <a href="https://en.wikipedia.org/wiki/Peaking_power_plant">peaker plants</a> have to be ramped up or down on a moment’s notice to balance them out.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:5px;">California ISO supply and demand in gigawatts, on Oct 22, 2015
+<span class="cite"><a href="Notes/03-demand-curve.html">(source)</a></span></div>
+<div class="script" data-script="svg 03-demand-curve" style="width:440px;height:189px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Everything about today’s power grid, from this centralized control to the <a href="https://en.wikipedia.org/wiki/Electrical_grid#Aging_Infrastructure">aging machinery</a> performing transmission and distribution, is not suitable for clean energy.  The power grid was designed to take input from a handful of tightly-regulated power plants <a href="http://charming.awardspace.com/powergen/powergen.html">running in synchrony</a>, not millions of solar roofs.  And it was designed for power plants that were <a href="https://en.wikipedia.org/wiki/Base_load_power_plant">always available and predictable</a>, not intermittent sources like the sun and wind.</p>
+
+<blockquote>
+If everyone in Los Angeles put solar panels on their roofs, plugged electric cars into their garages and used smart power-meters today, something interesting would happen.  The electric grid would collapse. <span class="cite"><a href="http://newsroom.ucla.edu/stories/building-the-smart-grid-151474">(source)</a></span></blockquote>
+
+<p>In order for clean energy to work, it needs to get from where and when it is generated, to where and when it needed.  The “where” and “when” call for networking and storage, respectively.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:6px;">schematic of power grid in 1935, and also now <span class="cite"><a href="https://power2switch.com/blog/how-electricity-grew-up-a-brief-history-of-the-electrical-grid/">(source)</a></span></div>
+<div class="script" data-script="svg 03-grid-schematic" style="width:440px;height:90px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="moving-networking"><a href="#moving-networking">Energy networking <span>(moving energy in space)</span></a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The key idea that made the internet possible was the move from centralized <a href="https://en.wikipedia.org/wiki/Circuit_switching">circuit-switched</a> networks to distributed <a href="https://en.wikipedia.org/wiki/Packet_switching">packet-switching</a> protocols, where data could “find its way” from sender to receiver.</p>
+
+<p>Now it’s energy that needs to <a href="http://morethansmart.org/">find its way</a>.</p>
+
+<blockquote><p>The power network... will undergo the same kind of architectural transformation in the next decades that computing and the communication network has gone through in the last two.</p>
+</blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<img style="margin-top:-20px;" src="Images/03-arpanet.png" width="440" height="185">
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<blockquote><p>We envision a future network with hundreds of millions of active endpoints. These are not merely passive loads as are most endpoints today, but endpoints that may generate, sense, compute, communicate, and actuate. They will create both a severe risk and a tremendous opportunity: an interconnected system of hundreds of millions of distributed energy resources (DERs) introducing rapid, large, and random fluctuations in power supply and demand...</p>
+<p>As infrastructure deployment progresses, the new bottleneck will be the need for <b>overarching frameworks, foundational theories, and practical algorithms</b> to manage a fully [data-centric] power network. <span class="cite"><a href="http://smart.caltech.edu">(source)</a></span></p>
+</blockquote>
+
+<p>This is an <a href="http://smart.caltech.edu">algorithms problem</a>!  It’s TCP/IP for energy.  Think of these <a href="http://smart.caltech.edu/publications-0.shtml">algorithms</a> as hybrids of distributed networking protocols and financial trading algorithms — they are <a href="http://smart.caltech.edu/papers/zeroduality.pdf">routing energy</a> as well as <a href="http://smart.caltech.edu/papers/marketmodels.pdf">participating in a market</a>.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<a href="http://morethansmart.org/programs/more-than-smart/"><img src="Images/03-more-than-smart.jpg" width="440" height="220"></a>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>TCP/IP spawned quite an <a href="https://en.wikipedia.org/wiki/Outline_of_the_Internet">industry of infrastructure and applications</a>.  It’s likely that something similar will happen as the <a href="https://www.smartgrid.gov/the_smart_grid/smart_grid.html">smart grid</a> gets underway.  One DOE-funded project attempting to provide the infrastructure for such an industry is <a href="http://transactionalnetwork.pnnl.gov/volttron.stm">VOLTTRON</a>, an “Intelligent Agent Platform for the Smart Grid”.
+
+<blockquote>
+<p>VOLTTRON is an innovative distributed control and sensing software platform. Its source code has been released, making it possible for researchers and others to use this tool to build applications for more efficiently managing energy use among appliances and devices, including heating, ventilation and air conditioning (HVAC) systems, lighting, electric vehicles and others. <span class="cite"><a href="http://gridoptics.pnnl.gov/VOLTTRON/">(source)</a></span></p></blockquote>
+
+<blockquote>
+<p>VOLTTRON is not an application such as demand response – demand response can be implemented as an application on top of VOLTTRON.</p>
+<p>VOLTTRON is open, flexible and modular, and already benefits from community support and development. <span class="cite"><a href="http://transactionalnetwork.pnnl.gov/volttron.stm">(source)</a></span></p>
+</blockquote>
+
+<p>Protocols for <a href="https://en.wikipedia.org/wiki/Internet_protocol_suite">moving</a> <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">data</a> <a href="https://en.wikipedia.org/wiki/BitTorrent">around</a> were the big thing for a few decades.  Then it was <a href="https://bitcoin.org">moving</a> <a href="https://www.stellar.org">money</a> <a href="https://stripe.com">around</a>.  The next big thing will be moving energy around.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<a href="https://github.com/VOLTTRON/volttron"><img src="Images/04-volttron-github.png" width="440" height="432"></a>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="moving-storage"><a href="#moving-storage">Energy storage <span>(moving energy in time)</span></a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Relying on sun and wind is only possible if we can store up their energy for when it’s not sunny or windy.  Many people assume that we’ll “just use batteries”, but the scale is off by a few orders of magnitude. All the batteries on earth can store <a class="no-preview" href="Notes/03-all-the-batteries.txt">less than ten minutes</a> of the world’s energy. At <a href="http://www.luxresearchinc.com/news-and-events/press-releases/read/energy-storage-market-rises-50-billion-2020-amid-dramatic">currently anticipated growth rates</a>, we wouldn’t have the batteries we need <a href="refs/DanielleFong-GrowthRateRequiredInEnergyStorage.pdf">for eighty years</a>.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Grid_energy_storage">Grid-scale energy storage</a> is perhaps the most critical technology problem in clean energy. When I visited the <a href="http://www.caiso.com/">ISO</a>, the operator was just about <a href="http://www.caiso.com/Documents/ISOStoragePilotProjects-AdvancingSmarterGrid.pdf">imploring</a> us to invent better energy storage technologies, because they would change the game entirely.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:5px;">actual and required battery growth rates (power in terawatts, log scale)
+    <span class="cite"><a href="refs/DanielleFong-GrowthRateRequiredInEnergyStorage.pdf">(source)</a></span></div>
+<div class="script" data-script="svg 03-battery-growth" style="width:440px;height:182px;"></div>
+</div>
+
+<!-- close row --></div></div>
+
+<div class="grid-3" data-preview-container="storage-preview-container">
+<div class="grid-3-item">
+    <img src="Images/03-tesla.jpg" width="300" height="230">
+    <p>Tesla recently announced their <a href="http://www.teslamotors.com/powerwall">home battery initiative</a>, and a <a href="http://www.teslamotors.com/gigafactory">Gigafactory</a> to produce them.</p>
+
+</div><div class="grid-3-item">
+
+<img src="Images/03-lightsail.jpg" width="300" height="230">
+<p> My friend Danielle Fong started <a href="http://www.lightsail.com/">LightSail Energy</a> to store energy by compressing air with an engine.</p>
+
+</div><div class="grid-3-item">
+
+<img src="Images/03-storage.jpg" width="300" height="230">
+<p>There are various companies pursuing variations on batteries, compressors, flywheels, thermal storage, water pumps, <a href="https://en.wikipedia.org/wiki/List_of_energy_storage_projects">and more</a>.</p>
+</div>
+</div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<div id="storage-preview-container"></div>
+
+<p>Particularly charming is <a href="http://www.aresnorthamerica.com/">Advanced Rail Energy Storage</a>, whose <a href="http://www.aresnorthamerica.com/grid-scale-energy-storage">proposal</a> is</p>
+
+<blockquote>using lower-cost power to drive a train uphill and then let the train roll downhill to produce power when market prices are high. <span class="cite"><a href="http://www.aresnorthamerica.com/article/4875-advanced-rail-energy-storage-using-trains-to-store-power">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right" style="margin-bottom:14px;">
+
+<img src="Images/03-ares.jpg" width="440" height="153">
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>There’s also something delightful about the image of <a href="http://www.calmac.com">CALMAC</a>’s <a href="http://www.calmac.com/calmac-products-and-specifications">IceBank®</a>, <a href="http://ice-energy.com">Ice Energy</a>’s <a href="http://ice-energy.com/technology/">Ice Bear®</a>, and <a href="http://www.axiomexergy.com">Axiom</a>’s <a href="http://www.axiomexergy.com/#!the-refrigeration-battery-/c1z06">Refrigeration Battery™</a> battling it out in the arena of building-sized ice makers.</p>
+
+<blockquote>IceBank is an air-conditioning solution that makes ice at night [when energy demand is low] to cool buildings during the day. <span class="cite"><a href="http://www.calmac.com">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right" style="margin-bottom:10px;">
+
+<img src="Images/03-ice.jpg" width="440" height="174">
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>All this may make energy storage seem like a competitive space.  But the reality is that these companies aren’t competing with each other so much as they are competing with <a href="https://en.wikipedia.org/wiki/Peaking_power_plant">peaker plants</a> and cheap fossil fuels.  An energy storage startup can be in the strange position of continually adjusting their product and strategy in response to fluctuations in fossil fuel prices.</p>
+
+<p>But as in the case of energy production, there should be a tipping point if storing and reclaiming renewable energy can be made decisively cheaper than generating it from natural gas, and can be scaled up to meet demand.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<a href="http://www.lightsail.com/opportunity/"><img src="Images/03-equation.png" width="440" height="157"></a>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The core technologies in energy storage tend to be physics-based, but software plays essential roles in the form of design tools, simulation tools, and control systems.  My favorite example is the inexplicably gorgeous <a href="https://www.materialsproject.org">Materials Project</a>, a database and visualization tool for material properties, funded by the Department of Energy’s <a href="http://energy.gov/eere/vehicles/vehicle-technologies-office">Vehicle Technologies Program</a> to help <a href="http://energy.gov/sites/prod/files/2014/03/f9/vtpn07_es_howell_2012_o.pdf">invent better batteries</a>.
+  
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/03-materials.jpg" width="440" height="226">
+</div>
+
+
+<!-- end chapter --></div></div></div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- energy consumption -->
+
+<div id="consumption" class="toc"></div>
+<h2>Consuming Energy</h2>
+
+<!-- begin chapter --><div class="chapter">
+
+<div class="script figure" data-script="chart 04-sectors" style="width:940px;height:71px;margin-bottom:20px;"></div>
+
+<div style="position:relative;width:940px;height:200px;">
+    <div class="figure inline script" data-script="chart 04-transportation" style="width:233px;height:119px;"></div>
+    <div class="figure inline script" data-script="chart 04-manufacturing" style="width:296px;height:171px;"></div>
+    <div class="figure inline script" data-script="chart 04-residential" style="width:183px;height:93px;"></div>
+    <div class="figure inline script" data-script="chart 04-commercial" style="width:155px;height:158px;"></div>
+</div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<h3 id="consumption-transportation"><a href="#consumption-transportation">Transportation <span>(consuming what?)</span></a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>To the right is how the U.S. currently generates energy.  The most conspicuous <a href="https://flowcharts.llnl.gov/commodities/carbon">source of carbon emissions</a> is the thick green bar from “petroleum” to “transportation”.  We need to erase that.</p>
+
+<p>While we’re at it, we also ought to erase the thick grey bar from “transportation” to “wasted”.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure" style="margin-top:-44px;position:relative;">
+    <img src="Images/04-sankey.png" width="440" height="198">
+    <div class="script" data-script="svg 04-sankey" style="position:absolute;left:0;top:0;width:440px;height:198px;"></div>
+    <span class="cite" style="position:absolute;left:86px;top:-6px;"><a href="https://flowcharts.llnl.gov">(source)</a></span>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Passenger vehicles account for the majority of transportation-related greenhouse gas emissions. There are a number of emerging ways to reduce this impact.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 04-transportation-CO2" style="width:440px;height:97px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<div class="indent">
+<p><b>Electric vehicles</b> are inevitable.  Today, powering a car from the grid might not be much cleaner than burning gasoline.  But once the grid cleans up, not only will electric cars be cleaner than gas cars, they may be <a href="http://www.templetons.com/brad/robocars/transit-ends.html">more efficient than mass transit</a>.</p>
+</div>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 04-ev-grid" style="width:440px;height:97px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+ 
+<div class="indent">
+<p><b>New kinds of powered vehicles</b> are becoming possible which are more nimble and efficient than cars.</p>
+</div>
+
+<!-- close row --></div></div>
+
+<div style="margin-top:-15px;margin-bottom:5px;text-align:center;"><img src="Images/04-evs-row.png" width="728" height="140"></div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<div class="indent">
+<p>Most trips people take are fairly short. It’s not inconceivable that new vehicles could replace cars for most trips if the technology, design, and marketing are right, and the proper <a href="http://www.wired.com/2015/06/copenhagenize-worlds-most-bike-friendly-cities/">infrastructure</a> and laws are in place.  And you don’t need to start a <a href="http://www.teslamotors.com">car company</a> to <a href="https://www.faradaybikes.com">work</a> <a href="http://boostedboards.com/">on</a> <a href="http://ecorecoscooter.com/">them</a>.</p>
+</div>
+
+<div class="indent">
+<p><b>Coordinated autonomous vehicles</b> could lead to very different ways of moving around <a href="http://www.templetons.com/brad/robocars/whistlecar.html">people</a> and <a href="http://www.templetons.com/brad/robocars/deliverbots.html">deliveries</a>. This is basically mobile robotics on a big scale.  And again, you don’t necessarily need to go work for a <a href="http://www.google.com/selfdrivingcar/">car company</a> in order to make <a href="http://www.starship.xyz">interesting things</a> here.</p>
+</div>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure floaty" data-script="chart 04-trip-distribution" style="width:440px;height:201px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<div class="indent">
+<p><b>Reducing the need</b> for personal transportation via <a href="https://en.wikipedia.org/wiki/Car-free_movement">urban design</a>.  Among other reasons, this is important to counter the likely tendency of autonomous cars to <a href="https://askwonder.com/research-network/response/55f4ea68117aa6240064cdbe">increase urban sprawl</a>, which has been <a href="http://siteresources.worldbank.org/INTURBANDEVELOPMENT/Resources/336387-1342044185050/8756911-1342044630817/V2Chap09.pdf">strongly correlated with emissions</a>.</p>
+</div>
+
+<!-- right-column --></div><div class="column-right">
+
+<img src="Images/04-ecocity.jpg" width="440" height="80">
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Similar opportunities apply to <a href="https://en.wikipedia.org/wiki/Fleet_vehicle">fleet vehicles</a>.  One of the <a href="http://www.fool.com/investing/general/2015/05/17/why-is-this-tesla-motors-co-founder-putting-jet-tu.aspx">cofounders of Tesla</a> is now in the business of <a href="http://www.wrightspeed.com">electrifying Fedex vans and garbage trucks</a>.  Long-haul trucks are more of a challenge, but there’s room for improvement in <a href="http://www.actexpo.com/expohall">fuels</a>, <a href="http://www.truckingefficiency.org">vehicle design</a>, and <a href="http://www.grahampeacedesignmail.com/cwr/cwr2012_trucking_finall_download_singles.pdf">logistics</a>.</p>
+
+<p>As for airplanes, people might just have to <a href="http://www.withouthotair.com/c5/page_35.shtml">fly less</a>.  This will require better tools for remote collaboration, or in Saul Griffith’s words, “<a href="http://longnow.org/seminars/02015/sep/21/infrastructure-and-climate-change/#reader_wrapper">Make video conferencing not suck.</a>”</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 04-truck-emissions" style="width:440px;height:84px;"></div>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="consumption-coordination"><a href="#consumption-coordination">Coordination <span>(consuming when?)</span></a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Many home appliances that consume significant electricity — air conditioner, water heater, clothes dryer, electric vehicle charger — have some tolerance in when they actually need to run.  You don’t care exactly when your electric car is charging as long as it’s charged in the morning, and you don’t care exactly when your water heater is heating, as long as the tank stays hot.</p>
+
+<p>If your water heater could talk to your neighbor’s water heater and agree to avoid heating water at the same time, it would flatten out the demand curve, and help avoid the ups and downs that must be serviced by <a href="https://en.wikipedia.org/wiki/Peaking_power_plant">peaker plants</a>.  The water heater could also work aggressively when solar power was plentiful and hold back when clouds went by, to match the intermittency of renewables and require less energy storage.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="script figure" data-script="chart 04-residential-electricity" style="width:440px;height:136px;"></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The <a href="http://www.rmi.org">Rocky Mountain Institute</a> calls this “<a href="http://www.rmi.org/electricity_demand_flexibility">demand flexibility</a>”, and imagines appliances coordinated through price signals.</p>
+
+<blockquote>
+Demand flexibility uses communication and control technology to shift electricity use across hours of the day while delivering end-use services at the same or better quality but lower cost. It does this by applying automatic control to reshape a customer’s demand profile continuously in ways that either are invisible to or minimally affect the customer. <span class="cite"><a href="http://www.rmi.org/cms/Download.aspx?id=11692&file=RMI-TheEconomicsofDemandFlexibilityExecSummary.pdf">(source)</a></span>
+</blockquote>
+
+<p>This sort of coordination is a <a href="https://www.youtube.com/watch?v=IBwtCjiBvR0&t=1m36s">goal</a> of many of the “smart grid” proposals.</p>
+
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:6px;">example of load-shifting in response to price (usage in kW)
+    <span class="cite"><a href="http://www.rmi.org/cms/Download.aspx?id=11693&file=RMI-TheEconomicsofDemandFlexibilityFullReport.pdf">(source)</a></span></div>
+<div class="script" data-script="svg 04-demand-flexibility" style="width:440px;height:156px;"></div>
+</div>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="consumption-efficiency"><a href="#consumption-efficiency">Efficiency <span>(consuming how much?)</span></a></h3>
+
+<!-- close row --></div></div>
+
+<div class="grid-3" data-preview-container="efficiency-preview-container">
+<div class="grid-3-item">
+    <div class="figure">
+    <div class="figure-caption" style="margin-bottom:4px;">per capita electricity use in MWh
+        <span class="cite"><a href="http://www.arb.ca.gov/research/seminars/chu/chu.pdf">(source)</a></span></div>
+    <div class="script" data-script="svg 04-per-capita" style="width:314px;height:202px;margin-left:-14px; margin-bottom:10px;"></div>
+    </div>
+    <p>In the 1970s, efficiency pioneer <a href="http://eetd.lbl.gov/about-us/arthur-h-rosenfeld">Art Rosenfeld</a> instigated an <a href="http://www.energy.ca.gov/commissioners/rosenfeld_docs/2000-10_ROSENFELD_AUTOBIO.PDF">unprecedented program of energy saving</a>, literally halting the growth of per-capita electricity consumption in California.</p>
+
+</div><div class="grid-3-item">
+
+    <div class="figure">
+    <div class="figure-caption" style="margin-bottom:4px;">energy savings in California in TWh
+        <span class="cite"><a href="http://www.arb.ca.gov/research/seminars/chu/chu.pdf">(source)</a></span></div>
+    <div class="script" data-script="svg 04-utility-profits" style="width:314px;height:202px;margin-left:-14px; margin-bottom:10px;"></div>
+    </div>
+    <p>A lot of important technology came out of his lab, such as the <a href="https://en.wikipedia.org/wiki/Electrical_ballast">ballasts</a> that made <a href="https://en.wikipedia.org/wiki/Compact_fluorescent_lamp">compact florescent lamps</a> viable, but his two biggest influences were regulatory.  Half the energy savings in California came from <a href="https://eaei.lbl.gov/sites/all/files/sharing-the-savings-to-promote-energy-efficiency.pdf">adjusting the profit structure</a> of power utilities so they could be profitable selling <i>less</i> power.</p>
+
+</div><div class="grid-3-item">
+
+    <div class="figure">
+    <div class="figure-caption" style="margin-bottom:4px;">energy consumption of new U.S. refrigerators in MWh/yr
+        <span class="cite"><a href="http://www.energy.ca.gov/commissioners/rosenfeld_docs/2000-10_ROSENFELD_AUTOBIO.PDF">(source)</a></span></div>
+    <div class="script" data-script="svg 04-refrigerators" style="width:314px;height:202px;margin-left:-14px; margin-bottom:10px;"></div>
+    </div>
+    <p>The other half came from mandating energy usage standards for <a href="http://www.energy.ca.gov/title24/2013standards/">buildings</a> and <a href="http://energy.gov/eere/buildings/appliance-and-equipment-standards-program">appliances</a>.  These standards, as well as more recent voluntary programs such as <a href="https://www.energystar.gov">Energy Star</a>, forced companies to compete on efficiency.  This drove innovation (and even <a href="http://iopscience.iop.org/article/10.1088/1748-9326/9/11/114010/pdf">reduced cost!</a>) far more than simple consumer preference.</p></div><!-- grid-3-item -->
+
+</div><!-- grid-3 -->
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<div id="efficiency-preview-container"></div>
+
+<p>Building standards are a particularly interesting case here, because they were, and are, intimately tied to software.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<blockquote>
+<p><span class="author">(Art Rosenfeld)</span> [In 1975] the CEC’s draft “Title 24” residential building standard proposed to limit window area to 15% of wall area, without distinguishing among north, south, east, and west. Indeed I don’t think the standard even mentioned the sun!</p>
+<p>I contacted the CEC and discovered why they thought that windows wasted heat in winter and “coolth” in summer. The CEC staff had a choice of only two public-domain computer programs, the “Post Office” program, which was user hostile... and a newer program [NBSLD]... They chose NBSLD, but unfortunately had run it in a “fixed-thermostat” mode that kept the conditioned space at 72°F (22°C) all year...</p>
+<p>NBSLD’s author, Tamami Kusuda, had written a “floating-temperature” option, but it was more complicated and still had bugs, and neither Tamami nor anybody at CEC could get it to work satisfactorily. No wonder the CEC concluded that windows wasted energy!</p>
+<p>I decided that California needed two programs for energy analysis in buildings: first and immediately, a simple program for the design of single-family dwellings and, second and later, a comprehensive program for the design of large buildings, with a floating-indoor-temperature option and the ability to simulate HVAC distribution systems... <span class="cite"><a id="foo" href="http://www.energy.ca.gov/commissioners/rosenfeld_docs/2000-10_ROSENFELD_AUTOBIO.PDF">(source)</a></span></p>
+</blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<a href="http://www.energy.ca.gov/commissioners/rosenfeld_docs/2000-10_ROSENFELD_AUTOBIO.PDF"><img src="Images/04-rosenfeld-bio-sm.jpg" width="350" height="400"></a>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Rosenfeld’s energy-modeling software (which became <a href="http://doe2.com/doe2/">DOE-2</a>, then <a href="https://energyplus.net">EnergyPlus</a>) was quickly and widely adopted for calculating and specifying building performance standards.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Not only does <a href="https://simulationresearch.lbl.gov">energy simulation software</a> still <a href="http://www.energy.ca.gov/title24/2013standards/2013_computer_prog_list.html">drive building standards</a>, energy analysis tools such as <a href="https://gbs.autodesk.com/GBS/">Green Building Studio</a> and <a href="https://www.openstudio.net">OpenStudio</a> are now an integral part of the building design process.  Particularly interesting are tools such as <a href="http://sefaira.com">Sefaira</a> and <a href="https://flux.io/">Flux</a>, which give the designer immediate feedback on energy performance as they <a href="https://www.youtube.com/watch?v=F7snroYkomY&t=4m40s">adjust building parameters in realtime</a>.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="inline" style="margin-right:10px;"><div class="figure-caption">Sefaira</div><a href="http://sefaira.com/"><img src="Images/04-sefaira.jpg" width="215" height="136"></a></div><div class="inline"><div class="figure-caption">Flux</div><a href="https://flux.io/"><img src="Images/04-flux.jpg" width="215" height="136"></a></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>If efficiency incentives and tools have been effective for utilities, manufacturers, and designers, what about for end users?  One concern I’ve always had is that most people have <i>no idea</i> where their energy goes, so any attempt to conserve is like optimizing a program without a profiler.</p>
+
+<!-- close row --></div></div>
+
+<div class="grid-4" data-preview-container="efficiency-analytics-preview-container">
+<div class="grid-4-item">
+    <img src="Images/04-feedback-killawatt.jpg" width="227" height="118">
+    <p>Efficiency through analytics has motivated a lot of projects, from the humble and niche <a href="http://www.p3international.com/products/p4400.html">Kill-A-Watt</a>,</p>
+
+</div><div class="grid-4-item">
+    <img src="Images/04-feedback-google.jpg" width="227" height="118">
+    <p> to the characteristically <a href="http://arstechnica.com/information-technology/2011/07/microsoft-follows-googles-lead-cancels-hohm-energy-service/">short-lived</a> <a href="https://en.wikipedia.org/wiki/Google_PowerMeter">Google PowerMeter</a> and <a href="https://en.wikipedia.org/wiki/Hohm">Microsoft Hohm</a> services.</p>
+
+</div><div class="grid-4-item">
+    <img src="Images/04-feedback-saver.jpg" width="227" height="118">
+    <p>There are online energy calculators, such as <a href="http://www.lbl.gov">Berkeley Lab</a>’s <a href="http://homeenergysaver.lbl.gov/consumer/">Home Energy Saver</a>,</p>
+
+</div><div class="grid-4-item">
+    <img src="Images/04-feedback-dashboard.jpg" width="227" height="118">
+    <p>and <a href="http://www.deckmonitoring.com/building-efficiency/building-efficiency-for-commercial.html">energy dashboards</a> are appearing in commercial and institutional buildings.</p>
+
+</div></div>
+
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<div id="efficiency-analytics-preview-container"></div>
+
+<p>Many of these projects are <a href="http://www.greentechmedia.com/articles/read/Why-Your-Energy-Dashboard-May-be-Doomed-to-Fail">unsuccessful</a> and possibly only marginally effective.  I don’t think this means that efficiency feedback will always be unsuccessful — just that it needs to be done <i>well,</i> it needs to be <i>actionable,</i> and most importantly, it needs to be targeted at people with the <i>motivation and leverage</i> to take significant action.</p>
+
+<p>Individual consumers and homeowners might not be the best targets.  A more promising audience is people who manage large-scale systems and services.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>For example, garbage collection.  Garbage trucks stop-and-go down every street, in every city, at <a href="http://www.cert.ucr.edu/events/pems2014/liveagenda/25sandhu.pdf">3 miles per gallon</a>.  The startup <a href="http://www.enevo.com">Enevo</a> makes sensors which trash collectors install in dumpsters, and provides logistics software that plans an optimal collection route each day.  By only picking up full bins,  they cut fuel consumption in half.</p>
+
+<p>Enevo works at the system level, not consumer level.  There are fewer customers at system-level, but those customers have the <i>motivation and leverage</i> to implement heavy efficiency improvements.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<a href="http://www.enevo.com"><img src="Images/04-enevo.jpg" width="318" height="180"></a>
+
+<!-- end chapter --></div></div></div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- tools -->
+
+<div id="tools" class="toc"></div>
+<h2>Tools for Scientists &amp; Engineers</h2>
+
+<!-- begin chapter --><div class="chapter">
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>You won’t find programming languages mentioned in an <a href="http://www.ipcc.ch">IPCC</a> report.  Their influence is indirect; they get taken for granted.  But I feel that technical tools are of overwhelming importance, and completely under the radar of most people working to address climate change.</p>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="tools-technical"><a href="#tools-technical">Languages for technical computing</a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>I was hanging out with climate scientists while working on <a href="http://pushpoppress.com/ourchoice/">Al Gore’s book</a>, and they mostly did their thing in <a href="https://en.wikipedia.org/wiki/R_(programming_language)">R</a>.  This is typical; most statistical research is <a href="http://blog.kaggle.com/2011/11/27/kagglers-favorite-tools/">done in R</a>.  The language seems to inspire a level of vitriol that’s impressive even by programmers’ standards.  Even R’s advocates always seem <a href="https://www.youtube.com/watch?v=6S9r_YbqHy8">sort of apologetic</a>.</p>
+
+<blockquote>
+Using R is a bit akin to smoking. The beginning is difficult, one may get headaches and even gag the first few times. But in the long run, it becomes pleasurable and even addictive. Yet, deep down, for those willing to be honest, there is something not fully healthy in it. <span class="cite"><a href="http://www.johndcook.com/blog/2012/02/29/comparing-r-to-smoking/">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<a href="Images/05-r-big.jpg"><img src="Images/05-r.png" width="300" height="200"></a>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Complementary to R is <a href="https://en.wikipedia.org/wiki/MATLAB">Matlab</a>, the primary language for numerical computing in many scientific and engineering fields.  It’s ubiquitous. Matlab has been described as “the PHP of scientific computing”.</p>
+
+<blockquote>
+MATLAB is not good. <a href="https://archive.is/GLnbp">Do not use it.</a> <span class="cite"><a href="https://archive.is/GLnbp">(source)</a></span></blockquote>
+
+<p>R and Matlab are both forty years old, weighed down with forty years of cruft and bad design decisions.  Scientists and engineers use them because they are the vernacular, and there are no better alternatives.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<a href="Images/05-matlab-big.png"><img src="Images/05-matlab.png" width="440" height="144"></a>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Here’s an opinion you might not hear much — I feel that one effective approach to addressing climate change is contributing to the development of <a href="http://julialang.org/">Julia</a>.  Julia is a modern technical language, intended to replace Matlab, R, SciPy, and C++ on the scientific workbench. It’s <a href="http://danluu.com/julialang">immature</a> right now, but it has beautiful <a href="http://arxiv.org/abs/1411.1607">foundations</a>, enthusiastic users, and a lot of potential.</p>
+
+<p>I say this despite the fact that my own work has been in much the opposite direction as Julia.  Julia inherits the textual interaction of classic Matlab, SciPy and other children of the teletype — source code and command lines.</p>
+
+<p>The goal of my own research has been tools where scientists see what they’re doing in realtime, with immediate visual feedback and interactive exploration.  I deeply believe that a sea change in invention and discovery is possible, once technologists are working in environments designed around:</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure" style="margin-top:6px;">
+<a href="https://github.com/JuliaLang/julia/blob/master/base/dsp.jl"><img src="Images/05-julia.png" width="353" height="192"></a>
+</div>
+
+<!-- close row --></div></div>
+
+<div class="dynamic-tools no-preview" data-preview-container="dynamic-tools-preview-container"><div class="dynamic-tools-item">
+
+    <div class="figure-caption">Interactive Exploration of a Dynamical System</div>
+    <a href="https://vimeo.com/23839605"><div class="dynamic-tools-thumbnail"><div class="border"></div><img src="Images/05-dynamic-0.png" width="306" height="170"><video loop width="306" height="170">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-0.mov" type="video/mp4">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-0.webm" type="video/webm">
+    </video></div></a>
+    <p>ubiquitous visualization and in-context manipulation of the system being studied;</p>
+
+</div><div class="dynamic-tools-item">
+
+    <div class="figure-caption">Up and Down the Ladder of Abstraction</div>
+    <a href="http://worrydream.com/LadderOfAbstraction/"><div class="dynamic-tools-thumbnail"><div class="border"></div><img src="Images/05-dynamic-1.png" width="306" height="170"><video loop width="306" height="170">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-1.mov" type="video/mp4">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-1.webm" type="video/webm">
+    </video></div></a>
+    <p>actively exploring system behavior across multiple levels of abstraction in parallel;</p>
+
+</div><div class="dynamic-tools-item">
+
+    <div class="figure-caption">Multitrack Signal Processing</div>
+    <a href="http://worrydream.com/MediaForThinkingTheUnthinkable/"><div class="dynamic-tools-thumbnail"><div class="border"></div><img src="Images/05-dynamic-2.png" width="306" height="170"><video loop width="306" height="170">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-2.mov" type="video/mp4">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-2.webm" type="video/webm">
+    </video></div></a>
+    <p>visually investigating system behavior by transforming, measuring, searching, abstracting;</p>
+
+</div></div>
+
+<div class="dynamic-tools no-preview" data-preview-container="dynamic-tools-preview-container"><div class="dynamic-tools-item">
+
+    <div class="figure-caption">Inventing on Principle</div>
+    <a href="https://vimeo.com/36579366"><div class="dynamic-tools-thumbnail"><div class="border"></div><img src="Images/05-dynamic-3.png" width="306" height="170"><video loop width="306" height="170">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-3.mov" type="video/mp4">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-3.webm" type="video/webm">
+    </video></div></a>
+    <p>seeing the values of all system variables, all at once, in context;</p>
+
+</div><div class="dynamic-tools-item">
+
+    <div class="figure-caption">Media for Thinking the Unthinkable</div>
+    <a href="http://worrydream.com/MediaForThinkingTheUnthinkable/"><div class="dynamic-tools-thumbnail"><div class="border"></div><img src="Images/05-dynamic-4.png" width="306" height="170"><video loop width="306" height="170">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-4.mov" type="video/mp4">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-4.webm" type="video/webm">
+    </video></div></a>
+    <p>dynamic notations that embed simulation, and show the effects of parameter changes;</p>
+
+</div><div class="dynamic-tools-item">
+
+    <div class="figure-caption">Drawing Dynamic Visualizations</div>
+    <a href="https://vimeo.com/66085662"><div class="dynamic-tools-thumbnail"><div class="border"></div><img src="Images/05-dynamic-5.png" width="306" height="170"><video loop width="306" height="170">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-5.mov" type="video/mp4">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-dynamic-5.webm" type="video/webm">
+    </video></div></a>
+    <p>visually improvising special-purpose dynamic visualizations as needed.</p>
+
+</div></div>
+
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<div id="dynamic-tools-preview-container"></div>
+
+<p>Obviously I think this approach is important, and I urge you to pursue it if it speaks to you.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>At the same time, I’m also happy to endorse Julia because, well, it’s just about the only example of well-grounded academic research in technical computing.  <i>It’s the craziest thing.</i>  I’ve been following the programming language community for a decade, I’ve spoken at <a href="http://splashcon.org">SPLASH</a> and <a href="http://popl.mpi-sws.org">POPL</a> and <a href="http://www.thestrangeloop.com">Strange Loop</a>, and it’s only slightly an unfair generalization to say that almost every programming language researcher is working on</p>
+
+<div class="indent"><p>
+(a) languages and methods for software developers,<br>
+(b) languages for novices or end-users,<br>
+(c) implementation of compilers or runtimes, or<br>
+(d) theoretical considerations, often of type systems.
+</p></div>
+
+<p>The very concept of a “programming language” originated with <a href="https://en.wikipedia.org/wiki/Fortran">languages for scientists</a> — now such languages aren’t even part of the discussion!  Yet they remain the tools by which humanity understands the world and builds a better one.</p>
+
+<p>If we can provide our climate scientists and energy engineers with a civilized computing environment, I believe it will make a very significant difference.  But not one that is easily visible or measured!</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption">(a) sampling of “languages and methods for software developers” at SPLASH 2015
+<span class="cite"><a href="http://2015.splashcon.org/program/program-splash2015">(source)</a></span></div>
+<div class="splash-list">
+Rust: Idioms and Design Patterns<br>
+Functional Reactive Programming with nothing but Promises<br>
+Proposal for an Object-Oriented Multiple Dispatch Mechanism<br>
+Logical Reactive Programming<br>
+Real-Time Deadlines in Functional-Reactive Programming<br>
+Beyond Bash: Shell scripting in a statically-typed, object-oriented language<br>
+</div></div>
+
+<div class="figure">
+<div class="figure-caption">(b) sampling of “languages for novices or end-users” at SPLASH 2015
+<span class="cite"><a href="http://2015.splashcon.org/program/program-splash2015">(source)</a></span></div>
+<div class="splash-list">
+The Spreadsheet Paradigm: A Basis for Powerful and Accessible Programming<br>
+Model, Execute, Deploy: Answering the Hard Questions about End-user Programming<br>
+Language-Oriented Business Applications: Helping End Users become Programmers<br>
+ActiveSheets: Stream Processing with a Spreadsheet<br>
+The Gamma: Programming tools for data journalism<br>
+An end-user programming environment that’s cell-based and copy/paste friendly<br>
+</div></div>
+
+<div class="figure">
+<div class="figure-caption">(c) sampling of “implementation of compilers or runtimes” at SPLASH 2015
+<span class="cite"><a href="http://2015.splashcon.org/program/program-splash2015">(source)</a></span></div>
+<div class="splash-list">
+Akka.js: Towards a portable actor runtime environment<br>
+CLOP: A multi-stage compiler to seamlessly embed heterogeneous code<br>
+Language Independent Storage Strategies for Tracing JIT based VMs<br>
+Java-to-JavaScript Translation via Structured Control Flow Reconstruction of Compiler IR<br>
+Runtime Pointer Disambiguation<br>
+Optimizing Hash-Array Mapped Tries for Fast and Lean Immutable JVM Collections<br>
+</div></div>
+
+<div class="figure">
+<div class="figure-caption">(d) sampling of “theoretical considerations” at SPLASH 2015
+<span class="cite"><a href="http://2015.splashcon.org/program/program-splash2015">(source)</a></span></div>
+<div class="splash-list" style="margin-bottom:0;">
+A Formal Foundation for Trace-Based JIT Compilers<br>
+A Formalization of Typed Lua<br>
+Gradual Certified Programming in Coq<br>
+Relational Algebra by way of Adjunctions<br>
+A Co-Contextual Formulation of Type Rules and its Application to Incremental Type Checking<br>
+Actario: A Framework for Reasoning About Actor Systems<br>
+</div></div>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="tools-modeling"><a href="#tools-modeling">Languages for modeling physical systems</a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>A <a href="http://www.giss.nasa.gov/tools/modelE/">climate model</a> is software, but it’s a different kind of software than what most developers normally think about.  Software development usually means developing <i>software systems</i> — code that does useful work “as itself”, such as apps and servers and games.  The purpose of a climate model, on the other hand, is to “be something else” — to simulate a <i>physical system</i> in the world.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<img src="Images/05-climate-model.png" width="440" height="136">
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>A <a href="http://edadocs.software.keysight.com/display/ads2009/About+Model+Development+in+Verilog-A">circuit model</a> or <a href="https://build.openmodelica.org/Documentation/Modelica.Mechanics.html">mechanical model</a>, these days, is essentially software as well.  But again, such a model is not intended to serve as a working software system, but to aid in the design of a working physical system.</p>
+
+<!-- right-column --></div><div class="column-right" style="margin-bottom:-16px;">
+
+<img src="Images/05-circuit-model.png" width="440" height="136">
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p style="margin-bottom:18px;">Here are a handful of languages intended for modeling, simulating, or designing physical systems:</p>
+
+<!-- close row --></div></div>
+
+<div class="framed-langs no-preview"><div class="framed-lang">
+        <div><a href="https://www.wolfram.com/mathematica/">Mathematica</a> — symbolic manipulation and solving</div>
+        <div><a href="https://www.wolfram.com/mathematica/"><img src="Images/05-lang-mathematica.png" width="304" height="140"></a></div>
+    </div><div class="framed-lang">
+        <div><a href="http://www.mathworks.com/products/simulink/">Simulink</a> — continuous-time dynamic systems</div>
+        <div><a href="http://www.mathworks.com/products/simulink/"><img src="Images/05-lang-simulink.png" width="304" height="140"></a></div>
+    </div><div class="framed-lang">
+        <div><a href="https://www.modelica.org">Modelica</a> — mechanical, electrical, etc systems</div>
+        <div><a href="https://www.modelica.org/"><img src="Images/05-lang-modelica.png" width="304" height="140"></a></div>
+    </div></div>
+
+<div class="framed-langs no-preview" style="margin-bottom:18px;"><div class="framed-lang">
+        <div><a href="https://en.wikipedia.org/wiki/Verilog-AMS">Verilog-AMS</a> — analog and mixed-signal electronics</div>
+        <div><a href="https://en.wikipedia.org/wiki/Verilog-AMS"><img src="Images/05-lang-verilog-a.png" width="304" height="140"></a></div>
+    </div><div class="framed-lang">
+        <div><a href="http://www.esterel-technologies.com">Esterel</a> — reactive control systems</div>
+        <div><a href="http://www.esterel-technologies.com"><img src="Images/05-lang-esterel.png" width="304" height="140"></a></div>
+    </div><div class="framed-lang">
+        <div><a href="http://sbolstandard.org">SBOL</a> — synthetic biology systems</div>
+        <div><a href="http://sbolstandard.org"><img src="Images/05-lang-sbol.png" width="304" height="140"></a></div>
+    </div></div>
+    
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>Languages like these don’t get mentioned at programming language research <a href="http://splashcon.org">conferences</a>, or in <a href="http://lambda-the-ultimate.org">discussions</a>.  They’re typically dismissed as “<a href="https://en.wikipedia.org/wiki/Domain-specific_language">domain-specific</a>”.  This pejorative reflects a peculiar geocentrism of the programming language community, whose “general-purpose languages” such as Java and Python are in fact very much domain-specific — <i>specific to the domain of software development.</i></p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="http://book.xogeny.com">Modelica</a> is a programming language, but it is not a language for software development!  It’s for developing physical things that affect the physical world — such as the machinery that participates in energy production, energy storage, and energy consumption.  Data flow in Modelica works like no general-purpose language in existence, because it’s designed around how things influence things in physics, not on a CPU.</p>
+
+<!-- right-column --></div><div style="margin-bottom:10px;" class="column-right">
+
+<img style="margin-top:-12px;" src="Images/05-modelica.png" width="343" height="139">
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>I’ve seen enormous effort expended on languages, tools, and frameworks for software developers.  If you believe that language design can significantly affect the quality of software systems, then it should follow that language design can also affect the quality of energy systems.  And if the quality of such energy systems will, in turn, affect the livability of our planet, then it’s critical that the language development community give modeling languages the attention they deserve.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<img src="Images/05-devtools.jpg" width="392" height="138">
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="tools-controlling"><a href="#tools-controlling">Languages for controlling physical systems</a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>An <a href="https://en.wikipedia.org/wiki/Embedded_system">embedded control system</a> is software, but again, it’s a different kind of software.  Conventional software development is about building systems that live in a <i>virtual</i> world of pixels, files, databases, networks. The embedded controller is part of a physical system, sensing and actuating the <i>physical</i> world.</p>
+
+<p>Every modern piece of equipment producing or consuming energy — every <a href="http://www.winemantech.com/campaign/wind-turbine-embedded-control-systems-for-hil-testing/">wind turbine</a>, <a href="https://en.wikipedia.org/wiki/Battery_management_system">battery system</a>, or <a href="http://www.freescale.com/tools/embedded-software-and-tools/run-time-software/automotive-software-and-tools:ATOSFTWR">vehicle</a> — is built around one or more of these control systems.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure" style="margin-top:-7px;">
+<div class="script" data-script="svg 05-control-system" style="width:440px;height:82px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>I started my career <a href="http://worrydream.com/jobsearch/jobsearch.html">designing embedded systems</a>.  Standard practice is:  you design and perhaps simulate your system in Matlab or Simulink or pencil.  You implement it in <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>.  Sometimes <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a>, sometimes <a href="https://en.wikipedia.org/wiki/Assembly_language">assembly</a>, very occasionally someone will sneak some <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">Forth</a> or <a href="http://www.lua.org">Lua</a> in there.  But the idea that you might implement a control system in an environment designed for designing control systems — it hasn’t been part of the thinking.  This leads to long feedback loops, inflexible designs, and guesswork engineering.  But most critically, it denies engineers the sort of exploratory environment that fosters novel ideas.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure" style="margin-top:6px;">
+<img src="Images/05-embedded-c.png" width="251" height="179">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>There exist methodologies with the right intentions — <a href="https://en.wikipedia.org/wiki/Model-based_design">model-based design</a> with <a href="http://www.mathworks.com/solutions/embedded-code-generation/">generated code</a> seems to be coming into use <a href="http://www.mathworks.com/company/user_stories/bosch-ebike-systems-develops-electric-bike-controller-with-model-based-design.html?by=product">here</a> and <a href="http://www.greencarcongress.com/2009/10/general-motors-developed-twomode-hybrid-powertrain-with-mathworks-modelbased-design-cut-24-months-of.html">there</a> on industrial projects, for example.  But not only are such methods deeply segregated from the mainstream tech community, they are almost antithetical to how today’s programmers are trained to think.</p>
+
+<blockquote>Lessons Learned [from Caterpillar’s pilot project]: Developers who have primarily a control system design background adopt the model-based approach with enthusiasm.  Developers with primarily Computer Science backgrounds are uncomfortable with model-based development and require significantly more time and information prior to adopting the methodology. <span class="cite"><a href="https://www.mathworks.com/tagteam/20303_91198_Caterpillar_2004-01-0894.pdf">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div style="margin-bottom:0px;" class="column-right">
+
+<div class="figure">
+<a href="refs/4_Christian_Guss_Improve_Complexity_Management_with__Model-Based_Design_in_V-Modell.pdf"><img src="Images/05-model-based-design.jpg" width="440" height="223"></a>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The success of <a href="https://www.arduino.cc">Arduino</a> has had the perhaps retrograde effect of convincing an entire generation that the way to sense and actuate the physical world is through <a href="https://www.arduino.cc/en/Reference/Libraries">imperative method calls in C++</a>, shuffling bits and writing to ports, instead of in an environment designed around signal processing, control theory, and rapid and visible exploration.  As a result, software engineers find a fluid, responsive programming experience on the screen, and a crude and clumsy programming experience in the world.  It’s easier to conjure up virtual fireworks than to blink an LED.  So more and more of our engineers have retreated into the screen.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/05-arduino.png" width="440" height="174">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>But <i>climate change happens in the physical world.</i>  The technology to address it must operate on the physical world.  We won’t get that technology without good tools for programming beyond the screen.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="tools-finding"><a href="#tools-finding">Tools for problem-finding</a></h3>
+
+<p>The tools discussed so far are for scientists and engineers working on a problem.  But let’s back up.  How can someone find the right problem to work on in the first place?  And how can they evaluate whether they have the right ideas to solve it?</p>
+
+<h4>Tools for discovering problems</h4>
+
+<p>Everyone knows the high-level areas that need work: ”clean energy”, “carbon capture”, and so on.  But real engineering problems lie in the details — how to <a href="https://news.mit.edu/2015/siting-wind-farms-quickly-cheaply-0717">quickly estimate</a> wind capacity at a location; how to <a href="http://www.caltech.edu/news/caltechs-unique-wind-projects-move-forward-39703">place windmills</a> without aerodynamic interference; how to <a href="http://www.lightsail.com">store energy</a> in compressed air without losing it through heat.</p>
+
+<p>How do we surface these problems?  How can an eager technologist find their way to <i>sub-problems within other people’s projects</i> where they might have a relevant idea?  How can they be exposed to <i>process problems</i> common across many projects?</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>I know a clean-energy inventor who will browse around a <a href="http://atlas.media.mit.edu/en/visualize/tree_map/hs92/export/all/all/show/2013/">treemap of global exports</a>, as a crude way to get a feel for the “space of industry”.  She’ll see, for example, “gas turbines”, and get interested in ideas for improved gas turbines.  But then what?  Where does she go from there?</p>
+
+<p>She wishes she could simply click on “gas turbines”, and explore the space:</p>
+
+<div class="indent"><p>
+What are open problems in the field?<br>
+Who’s working on which projects?<br>
+What are the fringe ideas?<br>
+What are the process bottlenecks?<br>
+What dominates cost? What limits adoption?<br>
+<i>Why</i> make improvements here?  How would the world benefit?
+</p></div>
+
+<p>None of this information is at her fingertips.  Most isn’t even openly available — companies boast about successes, not roadblocks.  For each topic, she would have to spend weeks tracking down and meeting with industry insiders.  What she’d like is a tool that lets her skim across entire fields, browsing problems and discovering where she could be most useful.</p>
+
+<p>There are many reasons, of course, why organizations tend not to publicize their problems.  But in a planetary crisis, the “secretive competitive company” might not be the ideal organizing structure for human effort.  In an admirable gesture of global goodwill, Tesla recently <a href="http://www.teslamotors.com/blog/all-our-patent-are-belong-you">“open-sourced” their patents</a>, but patents represent <i>solutions</i>.  What if there were some way Tesla could reveal their <i>open problems</i>?</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:3px;">exports from anywhere to anywhere, Observatory of Economic Complexity <span class="cite"><a href="http://atlas.media.mit.edu/en/visualize/tree_map/hs92/export/all/all/show/2013/">(source)</a></span></div>
+<a href="http://atlas.media.mit.edu/en/visualize/tree_map/hs92/export/all/all/show/2013/"><img src="Images/05-treemap.png" width="440" height="481"></a>
+</div>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4>Tools for evaluating ideas</h4>
+
+<p>Suppose my friend uncovers an interesting problem in gas turbines, and comes up with an idea for an improvement. Now what?</p>
+
+<div class="indent"><p>
+Is the improvement <i>significant</i>?<br>
+Is the solution technically feasible?<br>
+How much would the solution cost to produce?<br>
+How much would it <i>need to cost</i> to be viable?<br>
+Who would use it?  What are their needs?<br>
+What metrics are even relevant?
+</p></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+  
+<p>Again, none of this information is at her fingertips, or even accessible.  She’d have to spend weeks doing an analysis, tracking down relevant data, getting price quotes, talking to industry insiders.*</p>
+
+<p>What she’d like are tools for quickly estimating the answers to these questions, so she can fluidly explore the space of possibilities and identify ideas that have some hope of being important, feasible, and viable.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="side-note floaty" style="position:absolute;bottom:0;">
+<p>* And that’s assuming she can even find the right people to talk to!  For some valuable inventions, such as <a href="http://www.axiomexergy.com">thermal energy storage for supermarkets</a> and <a href="http://www.fool.com/investing/general/2015/05/17/why-is-this-tesla-motors-co-founder-putting-jet-tu.aspx">electric powertrains for garbage trucks</a>, one wonders how the inventors stumbled upon such a niche application in the first place.</p>
+
+<p>In the case of garbage trucks, the answer is that the technology was developed for a different purpose, and the customer had to figure it out themselves:</p>
+
+<blockquote>
+FedEx was the first customer, and we did the medium-duty trucks first. Once we got some publicity with that, I got a call from one of the local garbage service providers... “This looks like it would work great for delivery trucks, [but] can you scale that up to my Class 8 garbage trucks? Will that work?”  We said, we hadn’t thought of that, but let’s go do the engineering and see if it will. In fact, it does, and it works really well. <span class="cite"><a href="http://www.fool.com/investing/general/2015/05/17/why-is-this-tesla-motors-co-founder-putting-jet-tu.aspx">(source)</a></span></blockquote>
+
+</div><!-- side-note -->
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Consider the <a href="https://www.plethora.com">Plethora</a> on-demand manufacturing service, which shows the mechanical designer an instant price quote, directly inside the CAD software, as they <i>design a part in real-time</i>.  In what other ways could inventors be given rapid feedback while exploring ideas?</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure" style="position:absolute;">
+<a href="https://www.plethora.com"><img src="Images/05-plethora.jpg" width="440" height="127"></a>
+</div>
+
+<!-- end chapter --></div></div></div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- media -->
+
+<div id="media" class="toc"></div>
+<h2>Media for Understanding Situations</h2>
+
+<!-- begin chapter --><div class="chapter">
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<h3 id="media-debate"><a href="#media-debate">Model-driven debate</a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>In 2008, economist <a href="https://en.wikipedia.org/wiki/Alan_Blinder">Alan Blinder</a> published <a href="http://www.nytimes.com/2008/07/27/business/27view.html">A Modest Proposal: Eco-Friendly Stimulus</a> in the New York Times, proposing a government program to encourage people to scrap their old inefficient cars.</p>
+
+<blockquote>Cash for Clunkers is a generic name for a variety of programs under which the government buys up some of the oldest, most polluting vehicles and scraps them... We can reduce pollution by pulling some of these wrecks off the road. Several pilot programs have found that doing so is a cost-effective way to reduce emissions. <span class="cite"><a href="http://www.nytimes.com/2008/07/27/business/27view.html">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<a href="http://www.nytimes.com/2008/07/27/business/27view.html"><img src="Images/06-blinder.jpg" width="440" height="202"></a>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>His article inspired the <a href="https://en.wikipedia.org/wiki/Car_Allowance_Rebate_System">Car Allowance Rebate System</a>, a $3 billion federal program which ran in July 2009.  Car owners were offered a $3500 rebate for trading in an inefficient vehicle when purchasing a more efficient one.  There was enormous debate, before and after, about what the <a href="http://web.archive.org/web/20130718180814/http://cashforclunkersnews.com/news/dianne-feinstein/">parameters of the program</a> should be, and <a href="http://freakonomics.com/2008/08/08/no-cash-for-clunkers/">whether it would be effective</a>.  Proponents claimed:</p>
+
+<blockquote>“Cash for clunkers” is a common-sense proposal that will... reduce the emissions that cause climate change, and make America more energy independent.  By helping Americans trade in their old, less fuel efficient cars and trucks for newer, higher mileage vehicles, consumers will save money at the pump, help protect our planet, and create and save jobs for American auto workers. <span class="cite"><a href="http://www.democraticleader.gov/newsroom/pelosi-statement-cash-clunkers-agreement/">(source)</a></span></blockquote>
+    
+<!-- right-column --></div><div class="column-right">
+
+<a href="https://web.archive.org/web/20090628110249/http://www.cars.gov/"><img src="Images/06-cars.jpg" width="440" height="239"></a>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>while critics claimed:</p>
+
+<blockquote>Although the program was originally billed as a way to reduce greenhouse gases, it achieves this aim amid huge expense and massive inefficiencies. Cash for Clunkers may diminish our nation’s overall carbon footprint, but the associated costs will be at least 10 times higher than other carbon-reduction strategies. <span class="cite"><a href="http://www.chron.com/opinion/outlook/article/Environmental-benefits-limited-from-Cash-for-1528663.php">(source)</a></span></blockquote>
+
+<p>Who to believe?</p>
+
+<p>The real question is — why are readers and decision-makers forced to “believe” anything at all?  Many claims made during the debate offered no numbers to back them up.  Claims with numbers rarely provided context to interpret those numbers.  And never — <i>never!</i> — were readers shown the <i>calculations</i> behind any numbers. Readers had to make up their minds on the basis of hand-waving, rhetoric, bombast.</p>
+
+<p>Imagine if Blinder’s proposal in the New York Times were written like this:</p>
+
+<!-- left-column --></div></div><div id="clunker" class="row"><div class="column-left">
+
+<blockquote>
+<p>Say we allocate
+<span class="adjustable-number" data-var="budget"></span>
+for the following program:  Car-owners who trade in an old car that gets less than 
+<span class="adjustable-number" data-var="old_MPG_limit"></span>,
+and purchase a new car that gets better than 
+<span class="adjustable-number" data-var="new_MPG_limit"></span>,
+will receive a 
+<span class="adjustable-number" data-var="rebate"></span>
+rebate.</p>
+
+<p>We estimate that this will get
+<span class="calculated-result" data-var="cars_traded"></span> old cars off the road.  It will save
+<span class="calculated-result" data-var="gallons_saved"></span> of gas (or
+<span class="calculated-result" data-var="hours_of_gas"></span> worth of U.S. gas consumption.)  
+It will avoid 
+<span class="calculated-result" data-var="tons_CO2e_saved"></span> CO<sub>2</sub>e, or 
+<span class="calculated-result" data-var="percent_annual_emissions"></span> of annual U.S. greenhouse gas emissions.
+</p>
+
+<p>The abatement cost is <span class="calculated-result" data-var="dollars_per_ton_CO2e"></span> per ton CO<sub>2</sub>e of federal spending, although it’s <span class="calculated-result" data-var="dollars_per_ton_CO2e_on_balance"></span> per ton CO<sub>2</sub>e on balance if you account for the money saved by consumers buying less gas.</p>
+</blockquote>
+
+<p>This passage gives some estimates of what the proposal would actually do.  But there’s something more going on. Some numbers above are <span class="adjustable-number-example">in green</span>.  <b>Drag green numbers <span data-var="drag-help-message"></span> to adjust them.</b>  (Really, do it!)  Notice how the consequences of your adjustments are reflected immediately in the following paragraph. The reader can explore alternative scenarios, understand the tradeoffs involved, and come to an informed conclusion about whether any such proposal could be a good decision.</p>
+
+<p>This is possible because the author is not just publishing <i>words</i>.  The author has provided a <i>model</i> — a set of formulas and algorithms that calculate the consequences of a given scenario.  Some numbers above are <span class="calculated-result-example">in blue</span>.  <b><span data-var="click-help-message"></span> a blue number to reveal how it was calculated.</b>  (<i>“It will save <span class="calculated-result" data-var="gallons_saved" data-no-help="1" style="white-space:normal;"></span>”</i> is a particularly meaty calculation.)  Notice how the model’s <i>assumptions</i> are clearly visible, and can even be adjusted by the reader.</p>
+
+<p>Readers are thus encouraged to examine and critique the model.  If they disagree, they can modify it into a competing model with their own preferred assumptions, and use it to argue for their position.  Model-driven material can be used as grounds for an <i>informed debate</i> about assumptions and tradeoffs.</p>
+
+<p>Modeling leads naturally from the particular to the general.  Instead of seeing an individual proposal as “right or wrong”, “bad or good”, people can see it as one point in a large space of possibilities.  By exploring the model, they come to understand the landscape of that space, and are in a position to invent better ideas for all the proposals to come.  Model-driven material can serve as a kind of <i>enhanced imagination</i>.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div id="clunker-calculations" class="figure">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Climate change is a global problem.  Discussion and debate will be central to figuring out the best actions to take.  We need good tools for imagining, proposing, debating, and understanding these actions.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="side-note" style="position:absolute;margin-top:4px;">The importance of models may need to be underscored in this age of “big data” and “data mining”.  Data, no matter how big, can only tell you what happened in the <i>past</i>.  Unless you’re a historian, you actually care about the <i>future</i> — what <i>will</i> happen, what <i>could</i> happen, what <i>would</i> happen if you did this or that.  Exploring these questions will always require models.  Let’s get over “big data” — it’s time for “big modeling”.</div>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+
+<h3 id="media-reading"><a href="#media-reading">Model-driven reading</a></h3>
+
+<p>How do we get public perception and public discussion of energy and climate centered around evidence-grounded models, instead of tips, soundbites, factoids, and emotional rhetoric?</p>
+
+<p>Or — are you really saving the earth by turning off your lights at night?  By how much?  How do you know?</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>This is something I struggled with in <a href="http://worrydream.com/TenBrighterIdeas/">Ten Brighter Ideas</a> and <a href="http://worrydream.com/ExplorableExplanations/">Explorable Explanations</a>, among other projects.</p>
+
+<blockquote>
+<p><span class="author">(Ten Brighter Ideas)</span> As with many areas of public interest, the common wisdom surrounding energy conservation consists of myths and legends, rules of thumb and superstitions. We’re given guidelines as soundbites, catchy but insubstantial. We trust them blindly, not knowing whether our actions make any significant impact...</p>
+
+<p>As you explore this document, imagine a world where we expect <i>every claim</i> to be accompanied by an explorable analysis, and <i>every statistic</i> to be linked to a primary source. Imagine collecting data and designing analyses in a collaborative wiki-like manner. <span class="cite"><a href="http://worrydream.com/TenBrighterIdeas/">(source)</a></span></p>
+</blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure" style="margin-top:2px;">
+<a href="http://worrydream.com/TenBrighterIdeas/"><img style="margin-top:7px;position:absolute;" src="Images/06-ten-brighter-ideas.png" width="440" height="263"></a>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Imagine a concerned citizen who does a web search for <a href="https://www.google.com/search?q=what+can+I+do+about+climate+change">"what can I do about climate change"</a>.  The top two results as I write this are the EPA’s <a href="http://www3.epa.gov/climatechange/wycd/">What You Can Do</a> and the David Suzuki Foundation’s <a href="http://www.davidsuzuki.org/what-you-can-do/top-10-ways-you-can-stop-climate-change/">Top 10 ways you can stop climate change</a>.</p>
+
+<!-- close row --></div></div>
+
+<div class="proverbs no-preview"><div 
+     class="proverbs-item-1"><a href="http://www3.epa.gov/climatechange/wycd/home.html"><img src="Images/06-list-epa.jpg" width="319" height="441"></a></div><div
+     class="proverbs-item-2"><a href="http://www.davidsuzuki.org/what-you-can-do/top-10-ways-you-can-stop-climate-change/"><img src="Images/06-list-suzuki.jpg" width="215" height="441"></a></div></div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>These are lists of <i>proverbs</i>.  Little action items, mostly dequantified, entirely decontextualized.  How <i>significant</i> is it to “eat wisely” and “trim your waste”?  How does it compare to other sources of harm?  How does it fit into the big picture?  How many people would have to participate in order for there to be appreciable impact?  How do you know that these aren’t token actions to assauge guilt?  </p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>And why trust them?  Their rhetoric is catchy, but so is the horrific “denialist” rhetoric from the Cato Institute and similar.  When the discussion is at the level of “trust me, I’m a scientist” and “look at the poor polar bears”, it becomes a matter of emotional appeal and faith, a form of religion.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="inline" style="margin-right:10px;"><div class="figure-caption">look at this polar bear</div><img src="Images/06-polar-bear.jpg" width="215" height="82"></div><div class="inline"><div class="figure-caption">look at this science</div><img src="Images/06-science.jpg" width="215" height="82"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><i>Climate change is too important for us to operate on faith.</i>  Citizens need and deserve reading material which shows <i>context</i>&nbsp;— how significant suggested actions are in the big picture&nbsp;— and which embeds <i>models</i>&nbsp;— formulas and algorithms which calculate that significance, for different scenarios, from primary-source data and explicit assumptions.</p>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="media-writing"><a href="#media-writing">Model-driven authoring</a></h3>
+
+<p>Why doesn’t such material exist?  Why isn’t every paragraph in the New York Times written like this?</p>
+
+<p>One reason is that the resources for creating this material don’t exist.  In order for model-driven material to become the norm, authors will need <i>data, models, tools,</i> and <i>standards.</i></p>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4>Data</h4>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p><a href="http://worrydream.com/TenBrighterIdeas/">Ten Brighter Ideas</a> is embarrassingly incomplete.  I had to give up after three analyses because it was too painful to find the data I needed.  I was spending days desperately typing words into search engines, crawling around government websites, and scrolling through PDFs.  (This was before <a href="http://data.gov/">data.gov</a>, which I’ve since found to be more disappointing than useful.)</p>
+
+<p>I assumed the pros had some better process, but later on <a href="http://pushpoppress.com/ourchoice/">Our Choice</a>, I found myself watching Al Gore’s research team and climate scientist friends as they typed words into search engines, crawled around government websites, and scrolled through PDFs.*</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption">my eyes are bleeding</div>
+<img src="Images/06-bleeding.jpg" width="440" height="134">
+</div>
+
+<div class="side-note" style="margin-top:37px;position:absolute;"><p>* Although sometimes they could type words into <i>password-protected</i> search engines to scroll through PDFs that weren’t freely available, despite being products of scholarly research performed with public funds.  I don’t have to talk here about the desperate need for open-access scientific publication, right?  That’s well-trod ground?</p></div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4>Models</h4>
+
+<p>If data is hard to find, models are virtually impossible.</p>
+
+<div class="model-icons">
+  <p><img style="margin-top:3px;" src="Images/06-icons-lamp.png" width="63" height="36">What’s a formula for estimating the power consumption of a home’s lighting?</p>
+  <p><img style="margin-top:-3px;" src="Images/06-icons-heater.png" width="63" height="48">What’s an algorithm that models the activity pattern of a water heater?  Or a thermostat?</p>
+  <p><img style="margin-top:1px;margin-left:-4px;" src="Images/06-icons-cow.png" width="63" height="40">What’s an equation for how methane emissions would vary with meat consumption?</p>
+  <p><img style="margin-top:0px;" src="Images/06-icons-forest.png" width="63" height="46">If a given country were to reduce deforestation by a given amount, how would that affect how much carbon it sinks?</p>
+  <p><img style="margin-top:4px;"  src="Images/06-icons-waste.png" width="63" height="42">How do you quantify “eating wisely” and “trimming your waste”?  And how do you calculate the effects as those quantities change?</p>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>People have figured out these things!  The formulas exist in Excel spreadsheets and Matlab code, buried on old hard drives somewhere.  Sometimes they’re vaguely described <i>in prose</i> in published papers.  But they aren’t accessible — they’re difficult to find, and generally impossible to “grab and use”.  The rare author will be able to <a href="http://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html">make up their own models</a>; most authors have no choice but to trust and regurgitate soundbites.</p>
+
+<p>What if there were an “<a href="https://www.npmjs.com">npm</a>” for scientific models?</p>
+
+<!-- right-column --></div><div class="column-right" style="margin-bottom:0;">
+
+<div class="figure">
+<div class="figure-caption">what if you could “npm install residential-lighting-energy-model”</div>
+<div class="code">
+<span style="color:#881350;">var</span> lighting = <span style="color:#003369;">require</span>(<span style="color:#760f15;">’residential-lighting-energy-model’</span>);<br>
+<br>
+<span style="color:#881350;">var</span> energyPerYear = lighting.<span style="color:#003369;">getEnergyPerYear</span>({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;zipCode: <span style="color:#0000ff;">94110</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;houseSize: <span style="color:#760f15;">&quot;small&quot;</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;occupants: <span style="color:#0000ff;">3</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fluorescentFraction: <span style="color:#0000ff;">0.75</span>,<br>
+});<br>
+<br>
+<span style="color:#236e25;">// energyPerYear should actually be a probability distribution,<br>
+// not a number, but that’s an essay for another time<br>
+</span>
+</div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4>Tools</h4>
+
+<p>Suppose there were good access to good data and good models.  How would an author write a document incorporating them?</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Today, even the most <a href="https://medium.com">modern</a> <a href="https://quip.com">writing</a> <a href="https://www.literatureandlatte.com/scrivener.php">tools</a> are designed around typing in <i>words</i>, not <i>facts</i>.  These tools are suitable for promoting preconceived ideas, but provide no help in ensuring that words reflect reality, or any plausible model of reality.  They encourage authors to fool themselves, and fool others.</p>
+
+<blockquote><span class="author">(Richard Feynman)</span> The first principle is that you must not fool yourself — and you are the easiest person to fool. <span class="cite"><a href="http://calteches.library.caltech.edu/51/2/CargoCult.pdf">(source)</a></span></blockquote>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<img src="Images/06-word-processing.jpg" width="440" height="156">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Imagine an authoring tool designed for <i>arguing from evidence</i>.  I don’t mean merely juxtaposing a document and reference material, but literally “autocompleting” sourced facts directly into the document.  Perhaps the tool would have built-in connections to fact databases and model repositories, not unlike the built-in spelling dictionary.  What if it were as easy to insert facts, data, and models as it is to insert emoji and cat photos?</p>
+
+<!-- close row --></div></div>
+
+<div class="autocomplete-video">
+	<video width="800" height="180" poster="Images/06-autocomplete-poster.jpg">
+		<source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/06-autocomplete.mov" type="video/mp4">
+        <source src="https://s3.amazonaws.com/worrydream.com/ClimateChange/Video/05-autocomplete.webm" type="video/webm">
+	</video>
+    <div class="videoChrome" style="display:none;">
+        <div class="marker">
+            <canvas class="markerProgressCanvas" width="24" height="24"></canvas>
+            <div class="markerProgressOverlay"></div>
+            <div class="markerPlayAgain">play<br>again</div>
+        </div>
+        <div class="videoOverlay">
+            <div class="videoPlayButton"></div>
+        </div>
+        <div class="videoDarken"></div>
+    </div>
+</div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>Furthermore, the point of embedding a model is that the reader can explore scenarios within the context of the document.  This requires tools for authoring “dynamic documents” — documents whose contents change as the reader explores the model.  Such tools are pretty much non-existent.</p>
+
+<p>The examples above use <a href="http://worrydream.com/Tangle/">Tangle</a>, a little library I made as a bootstrapping step.  It’s far from the goal of a real dynamic authoring tool. What might such a tool look like? Some sort of fusion of word processor and spreadsheet? An <a href="http://inform7.com/">Inform</a>-like environment for composing dynamic text?</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption">what is the “Microsoft Word” for something like this?</div>
+<img src="Images/06-clunker-redux.png" width="440" height="160">
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4>Literacy and standards</h4>
+
+<p>The initial proposals I sketched for <a href="http://pushpoppress.com/ourchoice/">Our Choice</a> were interactive graphics with scenario models, where readers could adjust parameters (e.g. pollution rate) and see the estimated effects.  The book editors rejected these, immediately.</p>
+<p>The reason was that <i>every number in the text required a citation.</i>  This was especially a concern for Al Gore, whose readership includes an aggressive contingent meticulously seeking proof of his deceptive fabrications.  For the book’s integrity, every number in the book must have appeared previously in a scientific paper.  An interactive graphic which generated its own numbers from an algorithm was unpublishable&nbsp;— <i>even if it used the same algorithm that the scientists themselves used.</i></p>
+
+<p>A commitment to sourcing every fact is laudible, of course.  What’s missing is an understanding of citing and publishing models, not just the data derived from those models.  This is a new problem&nbsp;— older media couldn’t generate data on their own.  Authors will need to figure out journalistic standards around model citation, and readers will need to become literate in how to “read” a model and understand its limitations.</p>
+
+
+<!-- end chapter --></div></div></div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- end -->
+
+<div id="coda" class="toc"></div>
+<h2>Also This</h2>
+
+<!-- begin chapter --><div class="chapter">
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<h3 id="coda-other"><a href="#coda-other">Other technology</a></h3>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4 style="margin-top:10px;">Nuclear power</h4>
+
+<p>I didn’t mention nuclear because I don’t know much about it.  See Stewart Brand’s book <a href="https://en.wikipedia.org/wiki/Whole_Earth_Discipline">Whole Earth Discipline</a> for an optimistic take from a recent convert.  (Ironically published five months before <a href="https://en.wikipedia.org/wiki/Fukushima_Daiichi_nuclear_disaster">Fukushima</a>, but his points still stand.)</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4>Geoengineering</h4>
+
+<p>“<a href="https://en.wikipedia.org/wiki/Climate_engineering">Geoengineering</a>” refers to “the deliberate large-scale intervention in the earth’s natural systems to counteract climate change”.  The topic was <a href="http://phys.org/news/2009-09-geoengineering-taboo.html">taboo</a> for many years, and it remains “controversial” (a euphemism for “socially risky to advocate”).  As a result, the amount of <a href="http://www.nytimes.com/2015/02/11/science/panel-urges-more-research-on-geoengineering-as-a-tool-against-climate-change.html?_r=0">research into geoengineering</a> is almost negligible compared to R&amp;D on decarbonization.</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>This is unfortunate, because if total global decarbonization by 2050 doesn’t succeed, we’ll be desperately wishing for some well-developed backup plans.  And even if, by some miracle, it does, we’ll still have <a href="http://www.ipcc-data.org/observ/ddc_co2.html">450-500 ppm of carbon</a> in the atmosphere, not going anywhere, still <a href="https://www.princeton.edu/main/news/archive/S38/51/51I69/index.xml?section=topstories">wreaking havoc</a>.</p>
+
+<p>Geoengineering is dicey because earth systems are complex and poorly understood, and interventions have unforseen consequences.  To me, this is a clear and urgent call for <i class="urgent">much better tools for understanding complex systems and forseeing consequences.</i></p>
+
+<p>There is almost certainly some set of things we can do at planet-scale that would be effective and safe.  It is almost certainly the case that the best options are <i>ideas that no one has thought of yet.</i>  Who will make the tools to enable people to conceive and verify these ideas?</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption">atmospheric CO<sub>2</sub> concentration in ppmv <span class="cite"><a href="http://www.ipcc-data.org/observ/ddc_co2.html">(source)</a></span></div>
+<div class="script" data-script="svg 07-ppm" style="width:440px;height:220px;margin-top:-20px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Fears of geoengineering play into the narrative of a people done in by their hubris.  But we’re past that point; we had the <a href="https://en.wikipedia.org/wiki/Steam_engine">hubris</a> and it <a href="http://www.wolframalpha.com/input/?i=atmospheric+carbon+from+1600+to+now">did us in</a>.  Human beings now <a href="https://en.wikipedia.org/wiki/Anthropocene">dominate the planet</a>, and it’s folly to pretend that merely “minimizing our impact” will reverse the damage.</p>
+
+<p>In 1968, Stewart Brand began the <a href="http://www.theguardian.com/books/2013/may/05/stewart-brand-whole-earth-catalog">Whole Earth Catalog</a> with the quip, “We are as gods, and might as well get good at it.”  In 2009, his <a href="http://www.theguardian.com/books/2010/jan/09/whole-earth-catalog-book-review">Whole Earth Discipline</a> upped the urgency: “We are as gods, and <a href="http://edge.org/conversation/we-are-as-gods-and-have-to-get-good-at-it"><i>have</i> to get good at it</a>.”</p>
+
+<p>If we must be gods, we should at least be cautious and well-informed gods, with the best possible tools for seeing, understanding, and debating our interventions, and the best possible meta-tools for improving those tools.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:5px;">portion of land-dwelling vertebrates that humans are responsible for, by mass <span class="cite"><a href="https://www.ted.com/talks/paul_maccready_on_nature_vs_humans?language=en">(source)</a></span></div>
+<div class="script" data-script="svg 07-anthropocene" style="width:440px;height:196px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h4>Foundational technology</h4>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>The inventors of the <a href="https://en.wikipedia.org/wiki/Invention_of_the_integrated_circuit">integrated circuit</a> were not thinking about how to preserve the environment.  Neither were the founders of the <a href="https://en.wikipedia.org/wiki/History_of_the_Internet">internet</a>.  (Maybe except <a href="http://www.dougengelbart.org/firsts/internet.html">one</a>.)  Today, it’s nearly impossible to imagine addressing global problems (or even reading this essay) without all the tools that have been built upon this technology.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="inline" style="margin-right:10px;"><div class="figure-caption">first integrated circuit</div><img src="Images/07-ic.jpg" width="215" height="84"></div><div class="inline"><div class="figure-caption">first internet</div><img src="Images/07-arpanet.jpg" width="215" height="84"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>Foundational technology appears essential only in retrospect.  Looking forward, these things have the character of “<a href="https://en.wikipedia.org/wiki/There_are_known_knowns">unknown unknowns</a>” — they are rarely sought out (or funded!) as a solution to any specific problem.  They appear out of the blue, initially seem niche, and eventually become relevant to everything.</p>
+
+<p>They may be hard to predict, but they have some common characteristics.  One is that they scale well.  Integrated circuits and the internet both scaled their “basic idea” from a dozen elements to a billion. Another is that they are purpose-agnostic.  They are “material” or “infrastructure”, not applications.</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<div class="figure-caption" style="margin-bottom:4px;">percent of U.S. population using the internet
+<span class="cite"><a href="http://data.worldbank.org/indicator/IT.NET.USER.P2">(source)</a></span></div>
+<div class="script" data-script="svg 07-internet-adoption" style="width:440px;height:124px;"></div>
+</div>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<p>I have <a href="http://stanford.edu/~boyd/cvxbook/">some</a> <a href="http://dsp.rice.edu/cs">candidates</a> <a href="http://jrgreer.caltech.edu/">in mind</a>; here’s one I’d put money on — <a href="https://en.wikipedia.org/wiki/Van_Jacobson">Van Jacobson</a>’s <a href="http://named-data.net">new internet protocol</a> is a <a href="https://www.youtube.com/watch?v=oCZMoY3q2uM">really big deal</a>.  I realize it sounds like overreach to claim that “Named Data Networking” could be fundamental to addressing climate change — that’s my point — but my thought is, how could it <i>not</i>?
+</p>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="coda-morale"><a href="#coda-morale">Morale</a></h3>
+
+<p>Climate change, closely understood, is terrifying.  The natural human response to such a bleak situation is despair.</p>
+
+<p><i>But despair is not useful.</i>  Despair is paralysis, and there’s work to be done.</p>
+
+<p>I feel that this is an essential psychological problem to be solved, and one that I’ve never seen mentioned: How do we create the conditions under which scientists and engineers can do great creative work without <a href="http://www.isthishowyoufeel.com/this-is-how-scientists-feel.html">succumbing</a> <a href="http://www.esquire.com/news-politics/a36228/ballad-of-the-sad-climatologists-0815/">to</a> <a href="http://nymag.com/scienceofus/2015/07/climate-scientists-face-psychological-problems.html">despair</a>?  And how can new people be encouraged to take up the problem, when their instinct is to turn away and work on something that lets them sleep at night?</p>
+
+<p>Crisis can be motivating for some people in some circumstances — <a href="https://en.wikipedia.org/wiki/Radiation_Laboratory_(MIT)">Rad Lab</a>, <a href="https://en.wikipedia.org/wiki/Manhattan_Project">Manhattan Project</a>, etc. — and there are <a href="https://en.wikipedia.org/wiki/Al_Gore">clearly</a> <a href="https://en.wikipedia.org/wiki/Amory_Lovins">some</a> <a href="https://en.wikipedia.org/wiki/James_Lovelock">people</a> who draw motivation from the climate crisis.  But as <a href="https://en.wikipedia.org/wiki/George_Marshall_(environmentalist)">George Marshall</a> has  <a href="http://www.climateconviction.org">explored in depth</a>, most people can’t handle it, and need to put it out of their minds.</p>
+
+<p>There are other fields of human endeavor in which morale must be managed quite directly, and they’ve had millenia to develop techniques for “rallying the troops” or “uplifting the congregation”.  I wonder if we can learn from them.  For both the climate worker and the soldier, the likelihood of imminent annihilation is a <i>distraction</i>, and they must be given a frame of mind that lets them concentrate on the work to be done.</p>
+
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="coda-see"><a href="#coda-see">The world is not what you see</a></h3>
+
+<p>Mikey Dickerson, an engineer who left Google to head up the <a href="http://blog.newrelic.com/wp-content/uploads/80893.pdf">heroic rescue of healthcare.gov</a>, concluded <a href="https://www.youtube.com/watch?v=7Vc8sxhy2I4">a recent talk</a> with a plea to the tech crowd:</p>
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<blockquote>
+<p>This is real life.  This is your country...  Our country is a place where we allocate our resources through the collective decisions that all of us make...  We allocate our resources to the point where we have thousands of engineers working on things like picture-sharing apps, when we’ve already got dozens of picture-sharing apps.</p>
+
+<p>We do not allocate anybody to problems like [identity theft of kids in foster care, food stamp distribution, the immigration process, federal pensions, the VA]...  This is just a handful of things that I’ve been asked to staff in the last week or so and do not have adequate staff to do...</p>
+
+<p>These are all problems that need the attention of people like you. <span class="cite"><a href="https://www.youtube.com/watch?v=7Vc8sxhy2I4&t=24m22s">(source)</a></span></p>
+</blockquote>
+
+<p><a href="https://www.asee.org/papers-and-publications/publications/14_11-47.pdf">100,000 people</a> received an engineering bachelor’s degree in the U.S. last year.  There are at least 100,000 people, every year, looking for an engineering problem to solve.  I have my own plea to all such people —
+</p>
+
+<!-- right-column --></div><div class="column-right">
+
+<div class="figure">
+<a href="https://www.youtube.com/watch?v=7Vc8sxhy2I4&t=24m22s"><img src="Images/07-mikey.jpg" width="440" height="235"></a>
+</div>
+
+<!-- close row --></div></div>
+
+<div class="coda-quote">The inconveniences of daily life are not the significant problems.<br>The world that scrolls past you on Twitter is not the real world.<br>You cannot calibrate your sense of what’s valuable and necessary to the current fashions in your field.</div>
+
+<!-- first left-column --><div class="row"><div class="column-left">
+
+<p>One sometimes gets the feeling, as Ian Bogost put it, of <a href="http://www.theatlantic.com/technology/archive/2014/09/future-ennui/380099/">rearranging app icons on the Titanic</a>.  I think the tech community can do better than that. <i>You</i> can do better than that.</p>
+
+<p>Climate change is the problem of our time.  It’s everyone’s problem, but it’s <i>our</i> responsibility — as people with the incomparable leverage of being able to work magic through technology.</p>
+
+<p>In this essay, I’ve tried to sketch out a map of where such magic is needed&nbsp;— systems for producing, moving, and consuming clean energy; tools for building them; media for understanding what needs to be built.  There are opportunities everywhere. Let’s get to work.</p>
+
+
+<!-- left-column --></div></div><div class="row"><div class="column-left">
+
+<h3 id="coda-biblio"><a href="#coda-biblio">Further reading</a></h3>
+
+<!-- close row --></div></div>
+
+<div class="biblio no-preview">
+
+    <div class="biblio-row">
+        <div class="biblio-group">
+            <div class="biblio-group-title">the plea</div>
+            <div class="biblio-group-contents"><div class="biblio-item">
+                    <a href="https://www.ted.com/talks/bill_gates"><img src="Images/07-ref-gates.jpg" width="150" height="110"></a>
+                    <div class="biblio-author">Bill Gates</div>
+                    <div class="biblio-title">Innovating to Zero</div>
+                </div><div class="biblio-item">
+                    <a href="http://tnp_encoded_videos.s3.amazonaws.com/web_videos/140927_FONG_FULL_WEB_9100.mp4"><img src="Images/07-ref-fong.jpg" width="150" height="110"></a>
+                    <div class="biblio-author">Danielle Fong</div>
+                    <div class="biblio-title">A Time for Urgency</div>
+                </div></div>
+        </div><div class="biblio-group">
+            <div class="biblio-group-title">the situation</div>
+            <div class="biblio-group-contents"><div class="biblio-item">
+                    <a href="http://www.eoearth.org"><img src="Images/07-ref-earth.jpg" width="150" height="110"></a>
+                    <div class="biblio-author">Encyclopedia of Earth</div>
+                    <div class="biblio-title"></div>
+                </div><div class="biblio-item">
+                    <a href="http://longnow.org/seminars/02009/jan/16/climate-change-recalculated/"><img src="Images/07-ref-griffith.jpg" width="150" height="110"></a>
+                    <div class="biblio-author">Saul Griffith</div>
+                    <div class="biblio-title">Climate Change Recalculated</div>
+                </div></div>
+        </div></div>
+
+    <div class="biblio-row">
+        <div class="biblio-group">
+            <div class="biblio-group-title">energy</div>
+            <div class="biblio-group-contents"><div class="biblio-item">
+                    <a href="http://www.withouthotair.com"><img src="Images/07-ref-mackay.jpg" width="150" height="206"></a>
+                    <div class="biblio-author">David MacKay</div>
+                    <div class="biblio-title">Without the Hot Air</div>
+                </div><div class="biblio-item">
+                    <a href="http://www.energy.ca.gov/commissioners/rosenfeld_docs/2000-10_ROSENFELD_AUTOBIO.PDF"><img src="Images/07-ref-rosenfeld.jpg" width="150" height="206"></a>
+                    <div class="biblio-author">Art Rosenfeld</div>
+                    <div class="biblio-title">The Art of Energy Efficiency</div>
+                </div></div>
+        </div><div class="biblio-group">
+            <div class="biblio-group-title">technology</div>
+            <div class="biblio-group-contents"><div class="biblio-item">
+                    <a href="http://www.amazon.com/dp/0143118285"><img src="Images/07-ref-brand.jpg" width="150" height="206"></a>
+                    <div class="biblio-author">Stewart Brand</div>
+                    <div class="biblio-title">Whole Earth Discipline</div>
+                </div><div class="biblio-item">
+                    <a href="http://pushpoppress.com/ourchoice/"><img style="margin-left:-4px;margin-top:51px;margin-bottom:-6px;" src="Images/07-ref-gore.jpg" width="210" height="162"></a>
+                    <div class="biblio-author">Al Gore</div>
+                    <div class="biblio-title">Our Choice</div>
+                </div></div>
+        </div></div>
+
+    <div class="biblio-row">
+        <div class="biblio-group">
+            <div class="biblio-group-title">business</div>
+            <div class="biblio-group-contents"><div class="biblio-item">
+                    <a href="http://www.amazon.com/dp/1603585389"><img src="Images/07-ref-lovins.jpg" width="150" height="206"></a>
+                    <div class="biblio-author">Amory Lovins</div>
+                    <div class="biblio-title">Reinventing Fire</div>
+                </div><div class="biblio-item">
+                    <a href="http://www.amazon.com/dp/161168255X"><img src="Images/07-ref-naam.jpg" width="150" height="206"></a>
+                    <div class="biblio-author">Ramez Naam</div>
+                    <div class="biblio-title">The Infinite Resource</div>
+                </div><div class="biblio-item">
+                    <a href="http://www.amazon.com/dp/0143121944"><img src="Images/07-ref-yergin.jpg" width="150" height="206"></a>
+                    <div class="biblio-author">Daniel Yergin</div>
+                    <div class="biblio-title">The Quest</div>
+                </div></div>
+        </div><div class="biblio-group">
+            <div class="biblio-group-title">psychology</div>
+            <div class="biblio-group-contents"><div class="biblio-item">
+                    <a href="http://www.amazon.com/dp/163286102X"><img src="Images/07-ref-marshall.jpg" width="150" height="206"></a>
+                    <div class="biblio-author">George Marshall</div>
+                    <div class="biblio-title">Don’t Even Think About It</div>
+                </div></div>
+        </div></div>
+
+</div><!-- biblio -->
+
+
+</div><!-- chapter -->
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- footer -->
+
+<div class="footer">
+<div class="chapter"><div class="row">
+
+<div class="footer-content">
+
+<p>“It’s more complicated than that.”  No kidding.  You could nail a list of caveats to any sentence in this essay.  But the complexity of these problems is no excuse for inaction.  It’s an invitation to read more, learn more, come to understand the situation, figure out what you can build, and go build it.  That’s why this essay has 400 hyperlinks.  It’s meant as a jumping-off point.  Jump off it.</p>
+
+<p>There’s one overarching caveat. This essay employed the rhetoric of “problem-solving” throughout.  I was trained as an engineer; engineers solve problems.  But, at least for the next century, the “problem” of climate change will not be “solved” — it can only be “managed”.  This is a long game.  One more reason to be thinking about tools, infrastructure, and foundations.  The next generation has some hard work ahead of them.</p>
+
+<p>So much thanks to Danielle Fong, Paula Te, Patrick Collison, Robert Ochshorn, and Joe Edelman for their help with this essay.  Thanks to Mike Bauerly for asking the question.</p>
+
+</div><!-- footer-content -->
+
+</div></div>
+</div>
+
+</body></html>

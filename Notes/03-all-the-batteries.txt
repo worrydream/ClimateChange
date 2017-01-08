@@ -1,0 +1,9 @@
+Bill Gates: Innovating to zero, 12:00
+https://www.ted.com/talks/bill_gates
+"All the batteries on Earth can store only 10 minutes of the world's electricity needs."
+
+Danielle Fong, private correspondence:
+"There's about 100 GWh of batteries produced every year. These batteries last about 3-5 years, but let's be generous and suppose they last for 10 years -- leaving 1000 GWh of batteries available for storage. The world uses about 10 TW on average, or 240,000 GWh per day, or 240x the total amount of battery storage used per day. That's actually about 6 minutes of storage -- so maybe Bill has been even more generous than I."
+
+(Her references are in here: http://worrydream.com/ClimateChange/refs/DanielleFong-GrowthRateRequiredInEnergyStorage.pdf)
+

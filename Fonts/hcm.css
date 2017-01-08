@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'hcm';
+    src: url('hcm-webfont.eot');
+    src: url('hcm-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hcm-webfont.woff2') format('woff2'),
+         url('hcm-webfont.woff') format('woff'),
+         url('hcm-webfont.ttf') format('truetype'),
+         url('hcm-webfont.svg#helvetica_condensedmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

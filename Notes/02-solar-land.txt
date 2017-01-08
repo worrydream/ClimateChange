@@ -1,0 +1,27 @@
+land in us
+    2,300,000 square miles of land
+        http://www.ers.usda.gov/amber-waves/2012-march/data-feature-how-is-land-used.aspx#.Vh7T37SXL5c
+
+land devoted to agriculture
+    1,173,000 square miles of farm (51%)
+        http://www.ers.usda.gov/amber-waves/2012-march/data-feature-how-is-land-used.aspx#.Vh7T37SXL5c
+
+land devoted to roads
+    17,929 square miles of road (0.6%)
+        http://www.artba.org/about/transportation-faqs/#11
+
+land required for PVs to power all US energy
+    38,900 trillion btu/year = 11,400,464 GWh/year
+        https://flowcharts.llnl.gov/content/assets/images/energy/us/Energy_US_2014.png
+    at 3.0 acres/GWh/year
+        http://www.nrel.gov/docs/fy13osti/56290.pdf table 4
+    = 34.2 million acres
+    = 53,400 square miles (1.8%)
+
+land required for PVs to power all US electricity
+    3,700,000 GWh/year
+        http://www.eia.gov/electricity/annual/html/epa_01_02.html
+    at 3.0 acres/GWh/year
+        http://www.nrel.gov/docs/fy13osti/56290.pdf table 4
+    = 11.1 million acres = 17,300 square miles (0.58%)
+    

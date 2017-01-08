@@ -1,0 +1,18 @@
+carbon emissions 1950-2013:
+    http://www.globalcarbonproject.org/carbonbudget/14/data.htm
+    Global_Carbon_Budget_2014_v1.1.xlsx
+    C. Le Quere, et al, Global Carbon Budget 2014. Earth System Science Data, doi:10.5194/essd-7-47-2015
+    
+carbon emissions 2014-2050:
+    interpolated from "IEA 4DS" scenario
+    http://www.iea.org/etp/explore/
+    
+carbon budget 2000-2050:
+    http://www.carbontracker.org/wp-content/uploads/2014/09/Unburnable-Carbon-Full-rev2-1.pdf
+    Carbon Tracker Initiative, Unburnable Carbon
+    (citing http://www.nature.com/nature/journal/v458/n7242/full/nature08017.html)
+    "The Potsdam Climate Institute has calculated a global carbon budget for the world to stay below 2C of warming. This uses probabilistic climate change modelling to calculate the total volume of carbon dioxide (CO2) emissions permitted in the first half of the 21st century to achieve the target. This revealed that to reduce the chance of exceeding 2 C warming to 20%, the global carbon budget for 2000-2050 is 886 GtCO2."
+    
+carbon budget 2015-2050:
+    From the 886 GtCO2 budget for 2000-2050, I subtracted out the 440 GtCO2 already spent 2000-2014, leaving 446 GtCO2 remaining for 2015-2050.
+

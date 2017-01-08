@@ -1,0 +1,113 @@
+<svg class="public-structure" width="940px" height="295px" viewBox="0 0 940 295" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSArtboardGroup">
+            <a xlink:href="http://energy.gov">
+                <rect stroke="#C1C1C1" fill="#E2FFDC" sketch:type="MSShapeGroup" x="0.5" y="19.5" width="540" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="220.389" y="43">Department of Energy (DOE)</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://energy.gov/eere">
+                <rect stroke="#C1C1C1" fill="#E2FFDB" sketch:type="MSShapeGroup" x="95.5" y="61.5" width="163" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="103.80196" y="77.5">Office of Energy Efficiency &amp; </tspan>
+                    <tspan x="110.75696" y="92.5">Renewable Energy (EERE)</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://energy.gov/national-labs">
+                <rect stroke="#C1C1C1" fill="#E2FFDB" sketch:type="MSShapeGroup" x="262.5" y="61.5" width="161" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="307.77" y="78">National Labs</tspan>
+                </text>
+            </a>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" x="273.9505" y="93" fill="#7E7E7E">
+                <tspan>(</tspan><a xlink:href="http://www.nrel.gov"><tspan 
+                    fill="#7E7E7E">NREL</tspan></a><tspan>, </tspan><a xlink:href="https://ies.lbl.gov"><tspan
+                    fill="#7E7E7E">IES</tspan></a><tspan>, </tspan><a xlink:href="http://www.anl.gov"><tspan
+                    fill="#7E7E7E">ANL</tspan></a><tspan>, </tspan><a xlink:href="https://www.ornl.gov"><tspan
+                    fill="#7E7E7E">ORNL</tspan></a><tspan>, etc)</tspan>
+            </text>
+            <a xlink:href="http://energy.gov/lpo">
+                <rect stroke="#C1C1C1" fill="#E2FFDB" sketch:type="MSShapeGroup" x="427.5" y="61.5" width="113" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="448.808" y="78">Loan Program </tspan>
+                    <tspan x="454.5475" y="93">Office (LPO)</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://energy.gov/savings/business-energy-investment-tax-credit-itc">
+                <rect fill="#D7F3FF" sketch:type="MSShapeGroup" x="617.5" y="62" width="68.5" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="622.757" y="80">Investment</tspan>
+                    <tspan x="622.887" y="95">Tax Credits</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://energy.gov/savings/renewable-electricity-production-tax-credit-ptc">
+                <rect fill="#D7F3FF" sketch:type="MSShapeGroup" x="548.5" y="62" width="67.5" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="553.4785" y="80">Production</tspan>
+                    <tspan x="552.887" y="95">Tax Credits</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://arpa-e.energy.gov">
+                <rect stroke="#C1C1C1" fill="#E2FFDB" sketch:type="MSShapeGroup" x="0.5" y="61.5" width="91" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="26.4935" y="85">ARPA-E</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://www.nsf.gov">
+                <rect stroke="#C1C1C1" fill="#FDFFC8" sketch:type="MSShapeGroup" x="692.5" y="19.5" width="113" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="706.405555" y="36">National Science </tspan>
+                    <tspan x="705.333055" y="51">Foundation (NSF)</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=501026">
+                <rect fill="#FDFFC8" sketch:type="MSShapeGroup" x="692.5" y="62" width="113" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="724.065055" y="79.20925">Energy for </tspan>
+                    <tspan x="715.348555" y="94.20925">Sustainability</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://www.energy.ca.gov/contracts/epic.html">
+                <rect fill="#FFDFB5" sketch:type="MSShapeGroup" x="814.5" y="62" width="126" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="835.4505" y="80">Electric Program </tspan>
+                    <tspan x="829.906" y="95">Investment Charge</tspan>
+                </text>
+            </a>
+            <a xlink:href="https://www.irs.gov">
+                <rect stroke="#C1C1C1" fill="#D7F3FF" sketch:type="MSShapeGroup" x="548.5" y="19.5" width="137" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="573.45" y="36">Internal Revenue </tspan>
+                    <tspan x="583.798" y="51">Service (IRS)</tspan>
+                </text>
+            </a>
+            <a xlink:href="http://www.energy.ca.gov">
+                <rect stroke="#C1C1C1" fill="#FFDFB5" sketch:type="MSShapeGroup" x="814.5" y="19.5" width="125" height="40" rx="2"></rect>
+                <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#7E7E7E">
+                    <tspan x="833.3065" y="35">California Energy </tspan>
+                    <tspan x="845.7735" y="50">Commission</tspan>
+                </text>
+            </a>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="0.0265" y="12">Federal</tspan>
+            </text>
+            <path d="M46.5,9.5 L804.5,9.5" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="814.1425" y="13">State</tspan>
+            </text>
+            <path d="M844,9.5 L940,9.5" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M44.5,107 L44.5,122" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M174.5,107 L174.5,122" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M387.5,107 L387.5,122" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M522.5,110.5 L566,110.5" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M544.5,111.5 L544.5,293.5 L476.5,293.5" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M715.5,107 L715.5,122" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M865.5,107 L865.5,122" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

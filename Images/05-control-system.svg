@@ -1,0 +1,72 @@
+<svg class="control-system" width="400px" height="82px" viewBox="0 0 400 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSArtboardGroup">
+            <rect stroke="#5DABC9" fill="#7CD3F5" sketch:type="MSShapeGroup" x="76" y="1" width="92" height="36" rx="2"></rect>
+            <rect stroke="#C1C1C1" fill="#EEEEEE" sketch:type="MSShapeGroup" x="197" y="1" width="92" height="36" rx="2"></rect>
+            <rect stroke="#C1C1C1" fill="#EEEEEE" sketch:type="MSShapeGroup" x="197" y="44" width="92" height="36" rx="2"></rect>
+            <rect fill="#EEEEEE" sketch:type="MSShapeGroup" x="317" y="1" width="68" height="79" rx="40"></rect>
+            <text sketch:type="MSTextLayer" fill="#848484">
+                <tspan x="1" y="22">commands</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#084F6B">
+                <tspan x="89.6545" y="22">control system</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="222.243" y="22">actuators</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="225.906" y="65">sensors</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="344.0755" y="30">the</tspan>
+                <tspan x="332.784" y="43">physical</tspan>
+                <tspan x="338.5865" y="56">world</tspan>
+            </text>
+            <path d="M52.4762039,18.5 L73.5,18.5" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M73.5,18.5 L62.7,15.5 L62.7,21.5 L73.5,18.5 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M171.476204,18.5 L192.5,18.5" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M192.5,18.5 L181.7,15.5 L181.7,21.5 L192.5,18.5 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M120.476204,60 L120.476204,40.4999855" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M120.476204,40.4999855 L117.476204,51.2999855 L123.476204,51.2999855 L120.476204,40.4999855 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M294.476204,18.5 L315.5,18.5" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M315.5,18.5 L304.7,15.5 L304.7,21.5 L315.5,18.5 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M120.5,60.5 L194.50676,60.5" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <rect stroke="#5DABC9" fill="#7CD3F5" sketch:type="MSShapeGroup" x="76" y="1" width="92" height="36" rx="2"></rect>
+            <rect stroke="#C1C1C1" fill="#EEEEEE" sketch:type="MSShapeGroup" x="197" y="1" width="92" height="36" rx="2"></rect>
+            <rect stroke="#C1C1C1" fill="#EEEEEE" sketch:type="MSShapeGroup" x="197" y="44" width="92" height="36" rx="2"></rect>
+            <rect fill="#EEEEEE" sketch:type="MSShapeGroup" x="317" y="1" width="68" height="79" rx="40"></rect>
+            <text sketch:type="MSTextLayer" fill="#848484">
+                <tspan x="1" y="22">commands</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#084F6B">
+                <tspan x="89.6545" y="22">control system</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="222.243" y="22">actuators</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="225.906" y="65">sensors</tspan>
+            </text>
+            <text sketch:type="MSTextLayer" sketch:alignment="middle" fill="#848484">
+                <tspan x="344.0755" y="30">the</tspan>
+                <tspan x="332.784" y="43">physical</tspan>
+                <tspan x="338.5865" y="56">world</tspan>
+            </text>
+            <path d="M52.4762039,18.5 L73.5,18.5" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M73.5,18.5 L62.7,15.5 L62.7,21.5 L73.5,18.5 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M171.476204,18.5 L192.5,18.5" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M192.5,18.5 L181.7,15.5 L181.7,21.5 L192.5,18.5 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M120.476204,60 L120.476204,40.4999855" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M120.476204,40.4999855 L117.476204,51.2999855 L123.476204,51.2999855 L120.476204,40.4999855 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M294.476204,18.5 L315.5,18.5" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M315.5,18.5 L304.7,15.5 L304.7,21.5 L315.5,18.5 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M315.5,61.5 L294.48,61.5" stroke="#979797" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path d="M294.48,61.5 L305.28,64.5 L305.28,58.5 L294.48,61.5 Z" stroke="#979797" stroke-linecap="square" fill="#979797"></path>
+            <path d="M120.5,60.5 L194.50676,60.5" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
